@@ -18,7 +18,7 @@
 3. بعد دقيقة أو اثنين الموقع يشتغل على: `https://اسم-المستخدم.github.io`
 
 ## ٤) قبل ما تعلني عن الموقع
-- افتحي sitemap.xml و robots.txt و llms.txt وبدلي `https://karenmilad2018-cmyk.github.io` برابط موقعك الحقيقي (أو ابعتيلي الرابط وأنا أجهزهم لك).
+- افتحي sitemap.xml و robots.txt و llms.txt وبدلي `https://karenmilad.com` برابط موقعك الحقيقي (أو ابعتيلي الرابط وأنا أجهزهم لك).
 - سجلي الموقع في **Google Search Console** وابعتي `sitemap.xml`.
 - سجليه في **Bing Webmaster Tools** (وده اللي بيعتمد عليه ChatGPT في البحث).
 - حطي رابط الموقع في بروفايلك على Freelancer و LinkedIn.

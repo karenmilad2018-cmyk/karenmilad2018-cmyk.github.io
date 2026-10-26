@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://karenmilad2018-cmyk.github.io/sitemap.xml
+Sitemap: https://karenmilad.com/sitemap.xml
