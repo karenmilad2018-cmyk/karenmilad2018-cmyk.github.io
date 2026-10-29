@@ -20,7 +20,10 @@ window.KAREN_PLATFORMS = {
     else if (m && window.KAREN_PLATFORMS[m[1]]) sessionStorage.setItem('k-via', m[1]);
     v = sessionStorage.getItem('k-via');
   } catch (e) { v = m && window.KAREN_PLATFORMS[m[1]] ? m[1] : null; }
-  window.KAREN_VIA = v && window.KAREN_PLATFORMS[v] ? v : null;
+  // WhatsApp is switched off: every contact goes through Freelancer.com unless ?via=direct is used once in this tab
+  try { if (/[?&]via=direct\b/.test(location.search)) sessionStorage.setItem('k-via', 'direct'); } catch (e) {}
+  var direct = false; try { direct = sessionStorage.getItem('k-via') === 'direct'; } catch (e) {}
+  window.KAREN_VIA = direct ? null : (v && window.KAREN_PLATFORMS[v] ? v : 'freelancer');
 })();
 
 /* Prices are hidden for visitors whose device is set to Egypt time (Africa/Cairo).
@@ -42,14 +45,14 @@ window.KAREN_PLATFORMS = {
   var I = {
     en: {
       flB: 'Hire me on Freelancer',
-      mail: 'Or request it by email', subj: 'Free sample request',
+      mail: 'Or request it by email', subj: 'Detailed quotation request',
       on: 'Online now', off: 'Back at {t}', fab: 'Chat on WhatsApp',
-      wa: 'Hi Karen! I’d like a free quote and a free sample of my own content.',
-      exitT: 'Before you go…', exitP: 'Send me your file now and get a free sample within 12–24 hours. You pay nothing unless you’re happy.', exitB: 'Get my free sample on WhatsApp', no: 'No thanks', close: 'Close',
-      toastT: 'Got your file ready?', toastP: 'Send it to me and I’ll reply with the exact price and a free sample.', toastB: 'Send on WhatsApp',
-      tips: [['Start here', 'Send your file on WhatsApp and get a free sample. You pay nothing until you approve.'], ['Not sure which service?', 'Answer 3 quick questions here and you’ll see the right service and its price.'], ['Talk to me directly', 'This button opens WhatsApp. I reply myself, no bots.']],
+      wa: 'Hi Karen! I’d like a detailed quotation.',
+      exitT: 'Before you go…', exitP: 'Send me your file now and get a detailed quotation within 12–24 hours. You pay nothing unless you’re happy.', exitB: 'Get my detailed quote on WhatsApp', no: 'No thanks', close: 'Close',
+      toastT: 'Got your file ready?', toastP: 'Send it to me and I’ll reply with the exact price and a detailed quotation.', toastB: 'Send on WhatsApp',
+      tips: [['Start here', 'Send your file on WhatsApp and get a detailed quotation. You pay nothing until you approve.'], ['Not sure which service?', 'Answer 3 quick questions here and you’ll see the right service and its price.'], ['Talk to me directly', 'This button opens WhatsApp. I reply myself, no bots.']],
       next: 'Next', done: 'Got it', skip: 'Skip', before: 'BEFORE', after: 'AFTER',
-      typing: ['thesis formatting', 'PDF to PowerPoint', 'payroll sheet', 'ISO 9001', 'kids worksheets', 'company profile', 'CV'],
+      typing: ['thesis formatting', 'PDF to PowerPoint', 'payroll sheet', 'ISO 9001:2015', 'kids worksheets', 'company profile', 'CV'],
       s: {
         newyear: ['New year, organised:', 'budgets, trackers and dashboards in Excel.', 'See Excel services'],
         easter: ['Easter season:', 'worship song and event slides for your church. Non-profits get 20% off.', 'See church slides'],
@@ -63,14 +66,14 @@ window.KAREN_PLATFORMS = {
     },
     ar: {
       flB: 'تواصل معي على فريلانسر',
-      mail: 'أو اطلبها عبر البريد الإلكتروني', subj: 'طلب عينة مجانية',
+      mail: 'أو اطلبها عبر البريد الإلكتروني', subj: 'طلب عرض سعر مفصل',
       on: 'متاحة الآن', off: 'أعود الساعة {t}', fab: 'تواصل عبر واتساب',
-      wa: 'مرحباً كارين! أريد عرض سعر مجاني وعينة مجانية من محتواي.',
-      exitT: 'قبل أن تغادر…', exitP: 'أرسل ملفك الآن واحصل على عينة مجانية خلال ١٢–٢٤ ساعة. لن تدفع شيئاً إلا إذا كنت راضياً.', exitB: 'احصل على عينتك المجانية عبر واتساب', no: 'لا، شكراً', close: 'إغلاق',
-      toastT: 'ملفك جاهز؟', toastP: 'أرسله لي وسأرد عليك بالسعر الدقيق وعينة مجانية.', toastB: 'أرسل عبر واتساب',
-      tips: [['ابدأ من هنا', 'أرسل ملفك عبر واتساب واحصل على عينة مجانية. لا تدفع شيئاً قبل موافقتك.'], ['لست متأكداً من الخدمة؟', 'أجب عن ٣ أسئلة سريعة هنا وستظهر لك الخدمة المناسبة وسعرها.'], ['تواصل معي مباشرة', 'هذا الزر يفتح واتساب. أرد بنفسي، بدون ردود آلية.']],
+      wa: 'مرحباً كارين! أريد عرض سعر مفصل لمشروعي.',
+      exitT: 'قبل أن تغادر…', exitP: 'أرسل ملفك الآن واحصل على عرض سعر مفصل خلال ١٢–٢٤ ساعة. لن تدفع شيئاً إلا إذا كنت راضياً.', exitB: 'احصل على عرض السعر المفصل عبر واتساب', no: 'لا، شكراً', close: 'إغلاق',
+      toastT: 'ملفك جاهز؟', toastP: 'أرسله لي وسأرد عليك بالسعر الدقيق وعرض سعر مفصل.', toastB: 'أرسل عبر واتساب',
+      tips: [['ابدأ من هنا', 'أرسل ملفك عبر واتساب واحصل على عرض سعر مفصل. لا تدفع شيئاً قبل موافقتك.'], ['لست متأكداً من الخدمة؟', 'أجب عن ٣ أسئلة سريعة هنا وستظهر لك الخدمة المناسبة وسعرها.'], ['تواصل معي مباشرة', 'هذا الزر يفتح واتساب. أرد بنفسي، بدون ردود آلية.']],
       next: 'التالي', done: 'فهمت', skip: 'تخطي', before: 'قبل', after: 'بعد',
-      typing: ['تنسيق رسالة ماجستير', 'تحويل PDF إلى باوربوينت', 'كشف مرتبات', 'ISO 9001', 'أوراق عمل للأطفال', 'بروفايل شركة', 'سيرة ذاتية'],
+      typing: ['تنسيق رسالة ماجستير', 'تحويل PDF إلى باوربوينت', 'كشف مرتبات', 'ISO 9001:2015', 'أوراق عمل للأطفال', 'بروفايل شركة', 'سيرة ذاتية'],
       s: {
         newyear: ['سنة جديدة منظمة:', 'ميزانيات وملفات متابعة ولوحات بيانات في Excel.', 'خدمات Excel'],
         easter: ['موسم القيامة:', 'شرائح ترانيم وفعاليات لكنيستك. خصم ٢٠٪ للجهات غير الربحية.', 'شرائح الكنيسة'],
@@ -84,14 +87,14 @@ window.KAREN_PLATFORMS = {
     },
     de: {
       flB: 'Auf Freelancer beauftragen',
-      mail: 'Oder per E-Mail anfordern', subj: 'Anfrage: kostenlose Probe',
+      mail: 'Oder per E-Mail anfordern', subj: 'Anfrage: Detailliertes Angebot',
       on: 'Jetzt online', off: 'Zurück um {t}', fab: 'Per WhatsApp schreiben',
-      wa: 'Hallo Karen! Ich hätte gern ein kostenloses Angebot und eine Gratis-Probe mit meinem eigenen Inhalt.',
-      exitT: 'Bevor Sie gehen…', exitP: 'Senden Sie mir jetzt Ihre Datei und erhalten Sie in 12–24 Stunden eine Gratis-Probe. Sie zahlen nur, wenn Sie zufrieden sind.', exitB: 'Gratis-Probe per WhatsApp', no: 'Nein, danke', close: 'Schließen',
-      toastT: 'Datei bereit?', toastP: 'Senden Sie sie mir, und ich antworte mit dem genauen Preis und einer Gratis-Probe.', toastB: 'Per WhatsApp senden',
-      tips: [['Hier starten', 'Datei per WhatsApp senden und Gratis-Probe erhalten. Sie zahlen erst nach Ihrer Freigabe.'], ['Welcher Service passt?', 'Beantworten Sie hier 3 kurze Fragen und sehen Sie den passenden Service mit Preis.'], ['Direkt mit mir sprechen', 'Dieser Button öffnet WhatsApp. Ich antworte selbst.']],
+      wa: 'Hallo Karen! Ich hätte gern ein detailliertes Angebot.',
+      exitT: 'Bevor Sie gehen…', exitP: 'Senden Sie mir jetzt Ihre Datei und erhalten Sie in 12–24 Stunden ein detailliertes Angebot. Sie zahlen nur, wenn Sie zufrieden sind.', exitB: 'detailliertes Angebot per WhatsApp', no: 'Nein, danke', close: 'Schließen',
+      toastT: 'Datei bereit?', toastP: 'Senden Sie sie mir, und ich antworte mit dem genauen Preis und einem detaillierten Angebot.', toastB: 'Per WhatsApp senden',
+      tips: [['Hier starten', 'Datei per WhatsApp senden und detailliertes Angebot erhalten. Sie zahlen erst nach Ihrer Freigabe.'], ['Welcher Service passt?', 'Beantworten Sie hier 3 kurze Fragen und sehen Sie den passenden Service mit Preis.'], ['Direkt mit mir sprechen', 'Dieser Button öffnet WhatsApp. Ich antworte selbst.']],
       next: 'Weiter', done: 'Verstanden', skip: 'Überspringen', before: 'VORHER', after: 'NACHHER',
-      typing: ['Abschlussarbeit formatieren', 'PDF zu PowerPoint', 'Gehaltsabrechnung', 'ISO 9001', 'Arbeitsblätter für Kinder', 'Firmenprofil', 'Lebenslauf'],
+      typing: ['Abschlussarbeit formatieren', 'PDF zu PowerPoint', 'Gehaltsabrechnung', 'ISO 9001:2015', 'Arbeitsblätter für Kinder', 'Firmenprofil', 'Lebenslauf'],
       s: {
         newyear: ['Neues Jahr, gut organisiert:', 'Budgets, Tracker und Dashboards in Excel.', 'Excel-Leistungen'],
         easter: ['Osterzeit:', 'Lied- und Veranstaltungsfolien für Ihre Gemeinde. Gemeinnützige erhalten 20 % Rabatt.', 'Kirchenfolien'],
@@ -105,14 +108,14 @@ window.KAREN_PLATFORMS = {
     },
     es: {
       flB: 'Contrátame en Freelancer',
-      mail: 'O pídela por email', subj: 'Solicitud de muestra gratis',
+      mail: 'O pídela por email', subj: 'Solicitud de presupuesto detallado',
       on: 'En línea ahora', off: 'Vuelvo a las {t}', fab: 'Escríbeme por WhatsApp',
-      wa: '¡Hola Karen! Quisiera un presupuesto gratis y una muestra gratis con mi propio contenido.',
-      exitT: 'Antes de irte…', exitP: 'Envíame tu archivo ahora y recibe una muestra gratis en 12–24 horas. No pagas nada si no quedas contento.', exitB: 'Quiero mi muestra gratis por WhatsApp', no: 'No, gracias', close: 'Cerrar',
-      toastT: '¿Tienes tu archivo listo?', toastP: 'Envíamelo y te respondo con el precio exacto y una muestra gratis.', toastB: 'Enviar por WhatsApp',
-      tips: [['Empieza aquí', 'Envía tu archivo por WhatsApp y recibe una muestra gratis. No pagas nada hasta aprobar.'], ['¿No sabes qué servicio?', 'Responde 3 preguntas rápidas aquí y verás el servicio adecuado con su precio.'], ['Háblame directamente', 'Este botón abre WhatsApp. Respondo yo, sin bots.']],
+      wa: '¡Hola Karen! Quisiera un presupuesto detallado.',
+      exitT: 'Antes de irte…', exitP: 'Envíame tu archivo ahora y recibe un presupuesto detallado en 12–24 horas. No pagas nada si no quedas contento.', exitB: 'Quiero mi presupuesto detallado por WhatsApp', no: 'No, gracias', close: 'Cerrar',
+      toastT: '¿Tienes tu archivo listo?', toastP: 'Envíamelo y te respondo con el precio exacto y un presupuesto detallado.', toastB: 'Enviar por WhatsApp',
+      tips: [['Empieza aquí', 'Envía tu archivo por WhatsApp y recibe un presupuesto detallado. No pagas nada hasta aprobar.'], ['¿No sabes qué servicio?', 'Responde 3 preguntas rápidas aquí y verás el servicio adecuado con su precio.'], ['Háblame directamente', 'Este botón abre WhatsApp. Respondo yo, sin bots.']],
       next: 'Siguiente', done: 'Entendido', skip: 'Omitir', before: 'ANTES', after: 'DESPUÉS',
-      typing: ['formato de tesis', 'PDF a PowerPoint', 'hoja de nómina', 'ISO 9001', 'fichas para niños', 'perfil de empresa', 'CV'],
+      typing: ['formato de tesis', 'PDF a PowerPoint', 'hoja de nómina', 'ISO 9001:2015', 'fichas para niños', 'perfil de empresa', 'CV'],
       s: {
         newyear: ['Año nuevo, todo en orden:', 'presupuestos, controles y paneles en Excel.', 'Servicios de Excel'],
         easter: ['Semana Santa:', 'diapositivas de cantos y eventos para tu iglesia. 20 % de descuento para ONG.', 'Diapositivas de iglesia'],
@@ -200,7 +203,7 @@ window.KAREN_PLATFORMS = {
     '.kx-mini b{height:16px;border-radius:5px;background:linear-gradient(90deg,#0E1A2B,#5B4B8A);width:0;animation:kxGrow 2.4s ease infinite}' +
     '.kx-mini u{height:6px;border-radius:3px;background:#DCE5E9;width:0;animation:kxGrow 2.4s ease .3s infinite}.kx-mini u+u{animation-delay:.6s}' +
     '@keyframes kxGrow{0%{width:0}50%,100%{width:85%}}';
-  css += '#k-fab.kx-via .b{background:#2D5BE3}#k-fab.kx-via .l{background:#fff;color:#0E1A2B;font-weight:700}html.k-via .k-online,html.k-via [data-k-online]{display:none!important}html.k-via a[data-via] svg{display:none!important}html.k-via a.k-via-btn{background:#2D5BE3!important;border-color:#2D5BE3!important;color:#fff!important;box-shadow:0 10px 24px rgba(45,91,227,.28)!important}';
+  css += '#k-fab.kx-via .b{background:#2D5BE3}#k-fab.kx-via .l{background:#fff;color:#0E1A2B;font-weight:700}html.k-via .k-online,html.k-via [data-k-online]{display:none!important}html.k-via a[data-via] svg{display:none!important}html.k-via a[data-via].wa,html.k-via a[data-via][class*="wa"],html.k-via a[data-via].btn-wa,html.k-via a.k-via-btn{background:#2D5BE3!important;border-color:#2D5BE3!important;color:#fff!important;box-shadow:0 10px 24px rgba(45,91,227,.28)!important}';
   var st = document.createElement('style'); st.textContent = css; (document.head || document.documentElement).appendChild(st);
 
   var WA_SVG = '<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>';
