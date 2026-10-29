@@ -466,11 +466,11 @@ class Component extends DCLogic {
     const T = Q[L];
     const RATES = { USD: 1, SAR: 3.75, AED: 3.6725, QAR: 3.64, KWD: 0.307, BHD: 0.376, OMR: 0.3845, JOD: 0.709, EGP: 51, EUR: 0.86, GBP: 0.75, CHF: 0.8, CAD: 1.38, AUD: 1.52, NZD: 1.68, SGD: 1.3 };  // approximate rates from USD
     const curC = RATES[this.state.cur] ? this.state.cur : 'USD';
-    const money = (n) => { const v = n * RATES[curC]; return new Intl.NumberFormat('en-US', { style: 'currency', currency: curC, minimumFractionDigits: (v < 10 && Math.round(v * 100) % 100 !== 0) ? 2 : 0, maximumFractionDigits: v < 10 ? 2 : 0 }).format(v); };
+    const money = (n) => { if (window.KAREN_HIDE) return ({ en: 'Ask for a quote', ar: 'اطلب عرض سعر' })[this.state.lang] || 'Ask for a quote'; const v = n * RATES[curC]; return new Intl.NumberFormat('en-US', { style: 'currency', currency: curC, minimumFractionDigits: (v < 10 && Math.round(v * 100) % 100 !== 0) ? 2 : 0, maximumFractionDigits: v < 10 ? 2 : 0 }).format(v); };
     const wa = (txt) => 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(T.msg + '\n• ' + txt + '\n' + T.msgEnd + ' ');
     const stds = T.std.map((x, i) => {
       const pr = PRICES[i];
-      const pk = pr.length === 1 ? [{ n: T.single, p: money(pr[0]) }] : pr.map((v, k) => ({ n: T.pkgN[k], p: (k === 0 ? '' : T.fromL + ' ') + money(v) }));
+      const pk = pr.length === 1 ? [{ n: T.single, p: money(pr[0]) }] : pr.map((v, k) => ({ n: T.pkgN[k], p: (window.KAREN_HIDE ? '' : (k === 0 ? '' : T.fromL + ' ')) + money(v) }));
       return { code: x[0], name: x[1], items: x[2], pk, note: T.perMil, wa: wa(x[0] + ' · ' + x[1]) };
     });
     const ids = ['#standards', '#approach', '#why', '#faq'];
@@ -485,7 +485,7 @@ class Component extends DCLogic {
       navItems: T.nav.map((n, i) => ({ label: n, href: ids[i] })),
       facts: T.facts.map((f) => ({ a: f[0], b: f[1] })),
       stds,
-      docs: T.docs.map((d) => ({ n: d[0], p: T.fromL + ' ' + money(d[1]), wa: wa(d[0]) })),
+      docs: T.docs.map((d) => ({ n: d[0], p: (window.KAREN_HIDE ? '' : T.fromL + ' ') + money(d[1]), wa: wa(d[0]) })),
       ap: T.ap.map((a, i) => ({ n: '0' + (i + 1), t: a[0], d: a[1], c: i === T.ap.length - 1 ? accent : '#0E1A2B' })),
       why: T.why.map((w) => ({ t: w[0], d: w[1] })), cases: T.cases,
       faq: T.faq.map((f) => ({ q: f[0], a: f[1] })),

@@ -7,6 +7,19 @@
 */
 window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmail.com', from: 9, to: 23 };
 
+/* Prices are hidden for visitors whose device is set to Egypt time (Africa/Cairo).
+   Karen sees them anyway after opening the site once with ?owner=karen  (undo with ?owner=off). */
+(function () {
+  try {
+    var q = location.search || '';
+    if (/[?&]owner=karen\b/.test(q)) localStorage.setItem('k-owner', '1');
+    if (/[?&]owner=off\b/.test(q)) localStorage.removeItem('k-owner');
+  } catch (e) {}
+  var own = false; try { own = localStorage.getItem('k-owner') === '1'; } catch (e) {}
+  var tz = ''; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+  window.KAREN_HIDE = !own && tz === 'Africa/Cairo';
+})();
+
 (function () {
   'use strict';
   var K = window.KAREN;
@@ -429,7 +442,14 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
     var L = lang(); if (L !== lastL && fab) { lastL = L; drawFab(); drawSeason(); }
   };
 
+  var QT = { en: 'Ask for a quote', ar: 'اطلب عرض سعر', de: 'Angebot anfragen', es: 'Pide presupuesto' };
+  function hideStaticPrices() {
+    if (!window.KAREN_HIDE || isHome()) return;
+    var b = document.querySelectorAll('.badges span[dir=ltr]'); for (var i = 0; i < b.length; i++) b[i].remove();
+    var p = document.querySelectorAll('.pk b.p'); for (var j = 0; j < p.length; j++) { var bl = p[j].closest('[data-l]'); p[j].textContent = QT[(bl && bl.getAttribute('data-l')) || 'en'] || QT.en; p[j].removeAttribute('dir'); }
+  }
   function boot() {
+    hideStaticPrices();
     lastL = lang();
     drawFab(); drawSeason();
     window.__afterDraw();
