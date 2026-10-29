@@ -11,7 +11,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
    WhatsApp and email disappear and every contact button opens your Freelancer profile instead.
    It stays on while the visitor browses the site (same tab). ?via=off turns it off. */
 window.KAREN_PLATFORMS = {
-  freelancer: { url: 'https://www.freelancer.com/u/Karenmilad2018', name: 'Freelancer', proof: { en: '5.0 ★ · 15 reviews', ar: '5.0 ★ · 15 تقييماً', de: '5.0 ★ · 15 Bewertungen', es: '5.0 ★ · 15 reseñas' } }
+  freelancer: { url: 'https://www.freelancer.com/u/Karenmilad2018', name: 'Freelancer', proof: { en: '5.0 ★', ar: '5.0 ★', de: '5.0 ★', es: '5.0 ★' } }
 };
 (function () {
   var v = null, m = /[?&]via=([a-z]+)/.exec(location.search || '');
