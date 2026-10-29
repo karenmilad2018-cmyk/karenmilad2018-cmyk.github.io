@@ -437,7 +437,7 @@ var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (
 [].forEach.call(document.querySelectorAll('.rv,#proc,#yr,#chain'), function (e) { io.observe(e); });
 
 // hero: code types, site builds itself, goes live
-var LINES = ['<header> Your.Name', '<h1>Clear words. One button.</h1>', '<a href="wa.me/…">WhatsApp me</a>', '<section class="services">', 'git push → yourname.com ✓'];
+var LINES = ['<header> Your.Name', '<h1>Clear words. One button.</h1>', '<a href="#contact">Message me</a>', '<section class="services">', 'git push → yourname.com ✓'];
 function colour(s) {
   s = s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   s = s.replace(/(="[^"]*"?)/g, '\u0001$1\u0002').replace(/(&lt;\/?)(\w+)/g, '$1\u0003$2\u0002').replace(/(git push)/, '\u0004$1\u0002');

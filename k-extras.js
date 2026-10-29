@@ -7,6 +7,22 @@
 */
 window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmail.com', from: 9, to: 23 };
 
+/* Freelance-platform mode. Share  karenmilad.com/?via=freelancer  on Freelancer.com:
+   WhatsApp and email disappear and every contact button opens your Freelancer profile instead.
+   It stays on while the visitor browses the site (same tab). ?via=off turns it off. */
+window.KAREN_PLATFORMS = {
+  freelancer: { url: 'https://www.freelancer.com/u/Karenmilad2018', name: 'Freelancer', proof: { en: '5.0 ★ · 15 reviews', ar: '5.0 ★ · 15 تقييماً', de: '5.0 ★ · 15 Bewertungen', es: '5.0 ★ · 15 reseñas' } }
+};
+(function () {
+  var v = null, m = /[?&]via=([a-z]+)/.exec(location.search || '');
+  try {
+    if (m && m[1] === 'off') sessionStorage.removeItem('k-via');
+    else if (m && window.KAREN_PLATFORMS[m[1]]) sessionStorage.setItem('k-via', m[1]);
+    v = sessionStorage.getItem('k-via');
+  } catch (e) { v = m && window.KAREN_PLATFORMS[m[1]] ? m[1] : null; }
+  window.KAREN_VIA = v && window.KAREN_PLATFORMS[v] ? v : null;
+})();
+
 /* Prices are hidden for visitors whose device is set to Egypt time (Africa/Cairo).
    Karen sees them anyway after opening the site once with ?owner=karen  (undo with ?owner=off). */
 (function () {
@@ -25,6 +41,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
   var K = window.KAREN;
   var I = {
     en: {
+      flB: 'Hire me on Freelancer',
       mail: 'Or request it by email', subj: 'Free sample request',
       on: 'Online now', off: 'Back at {t}', fab: 'Chat on WhatsApp',
       wa: 'Hi Karen! I’d like a free quote and a free sample of my own content.',
@@ -45,6 +62,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
       }
     },
     ar: {
+      flB: 'تواصل معي على فريلانسر',
       mail: 'أو اطلبها عبر البريد الإلكتروني', subj: 'طلب عينة مجانية',
       on: 'متاحة الآن', off: 'أعود الساعة {t}', fab: 'تواصل عبر واتساب',
       wa: 'مرحباً كارين! أريد عرض سعر مجاني وعينة مجانية من محتواي.',
@@ -65,6 +83,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
       }
     },
     de: {
+      flB: 'Auf Freelancer beauftragen',
       mail: 'Oder per E-Mail anfordern', subj: 'Anfrage: kostenlose Probe',
       on: 'Jetzt online', off: 'Zurück um {t}', fab: 'Per WhatsApp schreiben',
       wa: 'Hallo Karen! Ich hätte gern ein kostenloses Angebot und eine Gratis-Probe mit meinem eigenen Inhalt.',
@@ -85,6 +104,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
       }
     },
     es: {
+      flB: 'Contrátame en Freelancer',
       mail: 'O pídela por email', subj: 'Solicitud de muestra gratis',
       on: 'En línea ahora', off: 'Vuelvo a las {t}', fab: 'Escríbeme por WhatsApp',
       wa: '¡Hola Karen! Quisiera un presupuesto gratis y una muestra gratis con mi propio contenido.',
@@ -116,8 +136,9 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
   }
   function T() { return I[lang()]; }
   function dir() { return lang() === 'ar' ? 'rtl' : 'ltr'; }
-  function mailUrl(msg) { return 'mailto:' + (K.email || 'karenmilad2018@gmail.com') + '?subject=' + encodeURIComponent(T().subj) + '&body=' + encodeURIComponent(msg || T().wa); }
-  function waUrl(msg) { return 'https://wa.me/' + K.wa + '?text=' + encodeURIComponent(msg || T().wa); }
+  var VIA = window.KAREN_VIA ? window.KAREN_PLATFORMS[window.KAREN_VIA] : null;
+  function mailUrl(msg) { if (VIA) return VIA.url; return 'mailto:' + (K.email || 'karenmilad2018@gmail.com') + '?subject=' + encodeURIComponent(T().subj) + '&body=' + encodeURIComponent(msg || T().wa); }
+  function waUrl(msg) { if (VIA) return VIA.url; return 'https://wa.me/' + K.wa + '?text=' + encodeURIComponent(msg || T().wa); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   var reduce = false; try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   var isHome = function () { return !!document.getElementById('root-deck'); };
@@ -179,16 +200,19 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
     '.kx-mini b{height:16px;border-radius:5px;background:linear-gradient(90deg,#0E1A2B,#5B4B8A);width:0;animation:kxGrow 2.4s ease infinite}' +
     '.kx-mini u{height:6px;border-radius:3px;background:#DCE5E9;width:0;animation:kxGrow 2.4s ease .3s infinite}.kx-mini u+u{animation-delay:.6s}' +
     '@keyframes kxGrow{0%{width:0}50%,100%{width:85%}}';
+  css += '#k-fab.kx-via .b{background:#2D5BE3}#k-fab.kx-via .l{background:#fff;color:#0E1A2B;font-weight:700}html.k-via .k-online,html.k-via [data-k-online]{display:none!important}html.k-via a[data-via] svg{display:none!important}html.k-via a.k-via-btn{background:#2D5BE3!important;border-color:#2D5BE3!important;color:#fff!important;box-shadow:0 10px 24px rgba(45,91,227,.28)!important}';
   var st = document.createElement('style'); st.textContent = css; (document.head || document.documentElement).appendChild(st);
 
   var WA_SVG = '<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>';
 
+  var VIA_SVG = '<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16v11H4zM9 8V5h6v3M4 13h16M11 13v2h2v-2"/></svg>';
   /* ---------- WhatsApp button with online status ---------- */
   var fab, lastL = '';
   function drawFab() {
     if (!fab) { fab = document.createElement('a'); fab.id = 'k-fab'; fab.className = 'kx'; fab.target = '_blank'; fab.rel = 'noopener'; document.body.appendChild(fab); }
     var t = T(), s = status();
     fab.setAttribute('dir', dir()); fab.href = waUrl(); fab.setAttribute('aria-label', t.fab);
+    if (VIA) { fab.classList.add('kx-via'); fab.setAttribute('aria-label', t.flB); fab.innerHTML = '<span class="b">' + VIA_SVG + '</span><span class="l">' + esc(t.flB) + ' · ' + esc(VIA.proof[lang()] || VIA.proof.en) + '</span>'; return; }
     fab.innerHTML = '<span class="b">' + WA_SVG + '</span><span class="l"><span class="d' + (s.on ? ' on' : '') + '"></span>' + esc(s.on ? t.on : t.off.replace('{t}', s.back)) + '</span>';
   }
 
@@ -200,7 +224,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
     ov.className = 'kx kx-ov'; ov.setAttribute('dir', dir());
     ov.innerHTML = '<div class="kx-modal" role="dialog" aria-modal="true" aria-label="' + esc(t.exitT) + '"><button type="button" class="kx-x" aria-label="' + esc(t.close) + '">×</button>' +
       '<span class="kx-ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E7145" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg></span>' +
-      '<h3>' + esc(t.exitT) + '</h3><p>' + esc(t.exitP) + '</p><a class="kx-btn" target="_blank" rel="noopener" href="' + waUrl() + '">' + esc(t.exitB) + '</a><a class="kx-btn kx-mail" href="' + mailUrl() + '">' + esc(t.mail) + '</a><button type="button" class="kx-no">' + esc(t.no) + '</button></div>';
+      '<h3>' + esc(t.exitT) + '</h3><p>' + esc(t.exitP) + '</p><a class="kx-btn" target="_blank" rel="noopener" href="' + waUrl() + '">' + esc(VIA ? t.flB : t.exitB) + '</a>' + (VIA ? '' : '<a class="kx-btn kx-mail" href="' + mailUrl() + '">' + esc(t.mail) + '</a>') + '<button type="button" class="kx-no">' + esc(t.no) + '</button></div>';
     function close() { ov.remove(); busy = false; document.removeEventListener('keydown', key); }
     function key(e) { if (e.key === 'Escape') close(); }
     ov.addEventListener('click', function (e) { if (e.target === ov || e.target.closest('.kx-x,.kx-no,.kx-btn')) close(); });
@@ -230,7 +254,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
     var t = T(), el = document.createElement('div');
     el.className = 'kx kx-toast'; el.setAttribute('dir', dir()); el.setAttribute('role', 'status');
     var msg = t.wa + (title ? '\n• ' + title : '');
-    el.innerHTML = '<button type="button" class="kx-x" aria-label="' + esc(t.close) + '">×</button><strong>' + esc(t.toastT) + '</strong><p>' + esc(t.toastP) + '</p><a target="_blank" rel="noopener" href="' + waUrl(msg) + '">' + esc(t.toastB) + '</a> <a class="kx-tm" href="' + mailUrl(msg) + '">' + esc(t.mail) + '</a>';
+    el.innerHTML = '<button type="button" class="kx-x" aria-label="' + esc(t.close) + '">×</button><strong>' + esc(t.toastT) + '</strong><p>' + esc(t.toastP) + '</p><a target="_blank" rel="noopener" href="' + waUrl(msg) + '">' + esc(VIA ? t.flB : t.toastB) + '</a>' + (VIA ? '' : ' <a class="kx-tm" href="' + mailUrl(msg) + '">' + esc(t.mail) + '</a>');
     el.querySelector('.kx-x').addEventListener('click', function () { el.remove(); });
     el.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { el.remove(); }); });
     document.body.appendChild(el);
@@ -478,6 +502,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
   }
 
   window.__afterDraw = function () {
+    try { if (window.KAREN_VIA && typeof sweep === 'function') setTimeout(sweep, 0); } catch (e) {}
     try { initSlide(); initBA(); initXL(); initCounters(); } catch (e) {}
     var L = lang(); if (L !== lastL && fab) { lastL = L; drawFab(); drawSeason(); }
   };
@@ -488,14 +513,37 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
     var b = document.querySelectorAll('.badges span[dir=ltr]'); for (var i = 0; i < b.length; i++) b[i].remove();
     var p = document.querySelectorAll('.pk b.p'); for (var j = 0; j < p.length; j++) { var bl = p[j].closest('[data-l]'); p[j].textContent = QT[(bl && bl.getAttribute('data-l')) || 'en'] || QT.en; p[j].removeAttribute('dir'); }
   }
+
+  /* platform mode: rewrite every contact link and mention on the page */
+  var FLW = [[/WhatsApp (?:or|and) (?:email|e-mail)/gi, 'Freelancer messages'], [/(?:email|e-mail) (?:or|and) WhatsApp/gi, 'Freelancer messages'],
+    [/واتساب أو البريد(?: الإلكتروني)?/g, 'رسائل فريلانسر'], [/عبر واتساب/g, 'عبر فريلانسر'], [/واتساب/g, 'فريلانسر'],
+    [/WhatsApp oder E-Mail/g, 'Freelancer-Nachrichten'], [/WhatsApp o (?:email|correo(?: electrónico)?)/g, 'mensajes de Freelancer'],
+    [/WhatsApp/g, 'Freelancer'], [/karenmilad2018@gmail\.com/g, ''], [/\+?20 ?120 ?708 ?2281/g, '']];
+  function sweep() {
+    if (!VIA) return;
+    var a = document.querySelectorAll('a[href]');
+    for (var i = 0; i < a.length; i++) {
+      var h = a[i].getAttribute('href') || '';
+      if (/wa\.me|whatsapp\.com/.test(h) || (a[i].getAttribute('data-via') && h !== VIA.url)) { a[i].setAttribute('href', VIA.url); a[i].target = '_blank'; a[i].rel = 'noopener'; }
+      if (a[i].getAttribute('href') === VIA.url && a[i].id !== 'k-fab' && !a[i].getAttribute('data-via')) {
+        a[i].setAttribute('data-via', '1');
+        var bg = getComputedStyle(a[i]).backgroundColor, mm = /rgba?\((\d+), (\d+), (\d+)/.exec(bg);
+        if (mm && +mm[2] > 150 && +mm[2] > +mm[1] + 60 && +mm[2] > +mm[3] + 40) a[i].classList.add('k-via-btn');
+      }
+      else if (/^mailto:|fiverr\.com|khamsat|mostaql|peopleperhour|upwork/.test(h)) { if (a[i].style.display !== 'none') a[i].style.display = 'none'; }
+    }
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, list = [];
+    while ((n = w.nextNode())) if (/WhatsApp|واتساب|karenmilad2018@|708 ?2281/.test(n.nodeValue) && !(n.parentNode && (/^(SCRIPT|STYLE|TEXTAREA)$/.test(n.parentNode.nodeName) || (n.parentNode.closest && n.parentNode.closest('[data-nosweep],[data-t=tp2d]'))))) list.push(n);
+    list.forEach(function (n) { var v = n.nodeValue; FLW.forEach(function (r) { v = v.replace(r[0], r[1]); }); if (v !== n.nodeValue) n.nodeValue = v; });
+  }
   function boot() {
     hideStaticPrices();
+    if (VIA) { document.documentElement.classList.add('k-via'); sweep(); setInterval(sweep, 600); }
     lastL = lang();
     drawFab(); drawSeason();
     window.__afterDraw();
     setTimeout(function () { if (fab && !reduce) { fab.classList.add('pulse'); setTimeout(function () { fab.classList.remove('pulse'); }, 4000); } }, 10000);
-    setTimeout(tips, 2500);
-    setTimeout(webPromo, 18000);
+    if (!VIA) { setTimeout(tips, 2500); setTimeout(webPromo, 18000); }
     setInterval(typing, 90);
     // static pages: watch language changes made by their own switcher
     setInterval(function () { var L = lang(); if (L !== lastL) { lastL = L; drawFab(); drawSeason(); } }, 800);
