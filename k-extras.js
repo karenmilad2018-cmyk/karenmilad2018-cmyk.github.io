@@ -170,7 +170,15 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
     '.kx-season[dir=rtl] .in{padding:9px 24px 9px 56px}' +
     '.kx-season a,.kx-season button.go{background:#4FA9B8;color:#0E1A2B;font:inherit;font-weight:800;font-size:13.5px;border:0;border-radius:999px;padding:6px 14px;text-decoration:none;cursor:pointer}' +
     '.kx-season .kx-x{background:rgba(255,255,255,.12);color:#FFFFFF;width:30px;height:30px;font-size:16px;top:50%;transform:translateY(-50%)}' +
-    '@media (max-width:640px){.kx-season{font-size:13.5px}}';
+    '@media (max-width:640px){.kx-season{font-size:13px}.kx-season .in{flex-wrap:nowrap;justify-content:flex-start;padding:7px 46px 7px 12px;text-align:start}.kx-season[dir=rtl] .in{padding:7px 12px 7px 46px}.kx-p{display:none}.kx-new{display:none !important}.kx-season a,.kx-season button.go{white-space:nowrap;padding:5px 10px;font-size:12.5px}}' +
+    '.kx-season{background:linear-gradient(90deg,#2A2150,#0E1A2B 45%,#1E4A5A)}.kx-new{color:#F2C14E;font-size:16px;animation:kxSpin 3s linear infinite;display:inline-block}' +
+    '@keyframes kxSpin{to{transform:rotate(360deg)}}.kx-fade{animation:kxFade .6s ease both}' +
+    '.kx-promo{background:linear-gradient(150deg,#2A2150,#0E1A2B);border:1px solid rgba(255,255,255,.12)}.kx-promo a{background:#F2C14E !important;color:#0E1A2B !important}' +
+    '.kx-mini{position:relative;height:74px;border-radius:10px;background:#FFFFFF;margin:24px 0 12px;overflow:hidden;padding:20px 10px 8px;display:flex;flex-direction:column;gap:6px}' +
+    '.kx-mini i{position:absolute;top:7px;width:7px;height:7px;border-radius:50%;background:#E05A3A;left:8px}.kx-mini i+i{left:19px;background:#F2C14E}.kx-mini i+i+i{left:30px;background:#25D366}' +
+    '.kx-mini b{height:16px;border-radius:5px;background:linear-gradient(90deg,#0E1A2B,#5B4B8A);width:0;animation:kxGrow 2.4s ease infinite}' +
+    '.kx-mini u{height:6px;border-radius:3px;background:#DCE5E9;width:0;animation:kxGrow 2.4s ease .3s infinite}.kx-mini u+u{animation-delay:.6s}' +
+    '@keyframes kxGrow{0%{width:0}50%,100%{width:85%}}';
   var st = document.createElement('style'); st.textContent = css; (document.head || document.documentElement).appendChild(st);
 
   var WA_SVG = '<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>';
@@ -271,18 +279,50 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
     if (m <= 2) return 'newyear'; if (m <= 4) return 'easter'; if (m <= 6) return 'thesis'; if (m <= 8) return 'summer'; if (m === 9) return 'school';
     if (m === 10 || (m === 11 && d.d < 20)) return 'iso'; if (m === 11) return 'bf'; return 'xmas';
   }
-  var season;
+  /* ---------- announcement bar (all pages): website ad + seasonal offer, rotating ---------- */
+  var WEBAD = {
+    en: { h: 'New: websites', p: 'Your own website, designed and coded by hand, ready in 3–5 days.', pr: ' From $250.', b: 'See websites', pt: 'Need a website?', pp: 'Designed and coded by hand, ready in 3–5 days. Each year you only pay for your domain.', pb: 'See examples' },
+    ar: { h: 'جديد: المواقع الإلكترونية', p: 'موقعك الخاص بتصميم وبرمجة يدوية، جاهز خلال 3–5 أيام.', pr: ' من 250 دولاراً.', b: 'شاهد المواقع', pt: 'تحتاج موقعاً إلكترونياً؟', pp: 'تصميم وبرمجة يدوية، جاهز خلال 3–5 أيام. ولا تدفع سنوياً إلا ثمن الدومين.', pb: 'شاهد الأمثلة' },
+    de: { h: 'Neu: Websites', p: 'Ihre eigene Website, von Hand gestaltet und programmiert, fertig in 3–5 Tagen.', pr: ' Ab 250 $.', b: 'Websites ansehen', pt: 'Sie brauchen eine Website?', pp: 'Von Hand gestaltet und programmiert, fertig in 3–5 Tagen. Jährlich zahlen Sie nur Ihre Domain.', pb: 'Beispiele ansehen' },
+    es: { h: 'Nuevo: webs', p: 'Tu propia web, diseñada y programada a mano, lista en 3–5 días.', pr: ' Desde 250 $.', b: 'Ver webs', pt: '¿Necesitas una web?', pp: 'Diseñada y programada a mano, lista en 3–5 días. Al año solo pagas tu dominio.', pb: 'Ver ejemplos' }
+  };
+  function base() { return /\/services\//.test(location.pathname) ? '../' : ''; }
+  function onWebPage() { return /websites\.html/.test(location.pathname); }
+  var season, rotT, rotI = 0;
   function drawSeason() {
+    if (onWebPage() || ss('k-bar-off')) { if (season) { season.remove(); season = null; } return; }
+    var t = T(), w = WEBAD[lang()] || WEBAD.en, msgs = [];
+    msgs.push({ h: w.h, p: w.p + (window.KAREN_HIDE ? '' : w.pr), b: '<a href="' + base() + 'websites.html">' + esc(w.b) + '</a>' });
     var key = seasonKey(), app = document.getElementById('app');
-    if (!isHome() || !app || ls('k-season-' + key + '-' + new Date().getFullYear())) { if (season) { season.remove(); season = null; } return; }
-    var t = T(), x = t.s[key], go = SEASON_GO[key];
-    if (!season) { season = document.createElement('div'); season.className = 'kx kx-season'; season.setAttribute('role', 'region'); document.body.insertBefore(season, app); }
-    season.setAttribute('dir', dir()); season.setAttribute('aria-label', x[0]);
-    var btn = go.indexOf('.html') !== -1 ? '<a href="' + go + '">' + esc(x[2]) + '</a>' : '<button type="button" class="go">' + esc(x[2]) + '</button>';
-    season.innerHTML = '<div class="in"><span><strong>' + esc(x[0]) + '</strong> ' + esc(x[1]) + '</span>' + btn + '<button type="button" class="kx-x" aria-label="' + esc(t.close) + '">×</button></div>';
-    var b = season.querySelector('button.go');
-    if (b) b.onclick = function () { if (go.charAt(0) === '#') { var el = document.querySelector(go); if (el) el.scrollIntoView({ behavior: 'smooth' }); } else if (window.__kOpen) window.__kOpen(go); };
-    season.querySelector('.kx-x').onclick = function () { ls('k-season-' + key + '-' + new Date().getFullYear(), '1'); season.remove(); season = null; };
+    if (isHome() && !ls('k-season-' + key + '-' + new Date().getFullYear())) {
+      var x = t.s[key], go = SEASON_GO[key];
+      msgs.push({ h: x[0], p: window.KAREN_HIDE ? x[1].replace(/[^.。]*\d+\s?%[^.]*\.?/g, '').trim() : x[1], go: go, b: go.indexOf('.html') !== -1 ? '<a href="' + go + '">' + esc(x[2]) + '</a>' : '<button type="button" class="go">' + esc(x[2]) + '</button>' });
+    }
+    if (!season) {
+      season = document.createElement('div'); season.className = 'kx kx-season'; season.setAttribute('role', 'region');
+      document.body.insertBefore(season, app || document.body.firstChild);
+    }
+    season.setAttribute('dir', dir());
+    function show() {
+      var m = msgs[rotI % msgs.length];
+      season.innerHTML = '<div class="in kx-fade"><span class="kx-new">★</span><span><strong>' + esc(m.h) + '</strong><span class="kx-p"> ' + esc(m.p) + '</span></span>' + m.b + '<button type="button" class="kx-x" aria-label="' + esc(t.close) + '">×</button></div>';
+      var b = season.querySelector('button.go');
+      if (b) b.onclick = function () { if (m.go.charAt(0) === '#') { var el = document.querySelector(m.go); if (el) el.scrollIntoView({ behavior: 'smooth' }); } else if (window.__kOpen) window.__kOpen(m.go); };
+      season.querySelector('.kx-x').onclick = function () { ss('k-bar-off', '1'); clearInterval(rotT); season.remove(); season = null; };
+    }
+    clearInterval(rotT); show();
+    if (msgs.length > 1 && !reduce) rotT = setInterval(function () { if (!season) return clearInterval(rotT); rotI++; show(); }, 7000);
+  }
+  /* ---------- website promo card (once per visit) ---------- */
+  function webPromo() {
+    if (onWebPage() || busy || ss('k-promo') || document.querySelector('.kx-toast')) return;
+    ss('k-promo', '1');
+    var w = WEBAD[lang()] || WEBAD.en, t = T(), el = document.createElement('div');
+    el.className = 'kx kx-toast kx-promo'; el.setAttribute('dir', dir()); el.setAttribute('role', 'status');
+    el.innerHTML = '<button type="button" class="kx-x" aria-label="' + esc(t.close) + '">×</button><div class="kx-mini" aria-hidden="true"><i></i><i></i><i></i><b></b><u></u><u></u></div><strong>' + esc(w.pt) + '</strong><p>' + esc(w.pp) + '</p><a href="' + base() + 'websites.html">' + esc(w.pb) + ' →</a>';
+    el.querySelector('.kx-x').addEventListener('click', function () { el.remove(); });
+    document.body.appendChild(el);
+    setTimeout(function () { if (el.parentNode) el.remove(); }, 20000);
   }
 
   /* ---------- homepage animations ---------- */
@@ -455,6 +495,7 @@ window.KAREN = window.KAREN || { wa: '201207082281', email: 'karenmilad2018@gmai
     window.__afterDraw();
     setTimeout(function () { if (fab && !reduce) { fab.classList.add('pulse'); setTimeout(function () { fab.classList.remove('pulse'); }, 4000); } }, 10000);
     setTimeout(tips, 2500);
+    setTimeout(webPromo, 18000);
     setInterval(typing, 90);
     // static pages: watch language changes made by their own switcher
     setInterval(function () { var L = lang(); if (L !== lastL) { lastL = L; drawFab(); drawSeason(); } }, 800);
