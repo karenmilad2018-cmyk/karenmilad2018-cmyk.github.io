@@ -1,120 +1,133 @@
-# Karen — Presentation, Document & Quality Consultant
+# Karen Milad · Quality consultant and designer (karenmilad.com)
 
-> Quality consultant (since 2015: ISO 9001, ISO 22000, ISO/IEC 17025, HACCP, Six Sigma, risk assessment; former quality manager of a calibration company; quality trainer in factories) and freelance designer working personally on PowerPoint, Word and Excel files, theses, print-ready books, kids worksheets, coaching documents, funding files, ISO documentation and hand-coded websites, in Arabic, English, German and Spanish. Fast delivery (1–3 business days for most jobs), fixed prices, free sample, payment after approving a watermarked preview.
+> Karen Milad is a quality consultant working in quality since 2015 and a full-time freelance designer since 2021, rated 5/5 on freelance platforms. She prepares ready-to-use content herself, by hand, with no AI and no outsourcing: ISO documentation, risk analysis, HACCP plans, training content for workers, presentations, Word documents, Excel sheets, children's learning material and hand-coded websites. She works in English, Arabic, German and Spanish, for clients worldwide, entirely by WhatsApp and email (no calls, visits or live sessions).
 
-Contact: karenmilad2018@gmail.com · Freelancer.com: https://www.freelancer.com/u/Karenmilad2018
+Contact: WhatsApp +20 120 708 2281 · karenmilad2018@gmail.com · Freelancer.com: https://www.freelancer.com/u/Karenmilad2018 · Fiverr: https://www.fiverr.com/s/K33Zk3l
+How to work with her: free sample of the client's own content within 12–24 hours, fixed prices quoted on request, payment after approval, unlimited revisions for 2 weeks after final delivery. Client files are kept confidential (she applies the confidentiality rules of ISO/IEC 17025:2017).
+
+## Expertise
+- Quality and ISO: ISO 9001:2015, ISO 22000:2018 with HACCP, ISO/IEC 17025:2017, ISO 31000:2018.
+- Methods: brainstorming, fishbone (Ishikawa) root-cause analysis, risk analysis with a severity × likelihood risk matrix, HACCP (7 principles of the Codex Alimentarius), Six Sigma, CAPA, internal audits.
+- Background: quality studies taught in English with a food and pharmaceutical specialisation (microbiology); quality control in a multinational factory (2015); auditor and trainer for medical and food companies (from 2016); quality manager of a scientific instrument calibration company for 5 years (ISO/IEC 17025:2017 calibration programme); quality systems for meat, dairy, cosmetics and pest control companies (one in the USA); shipment inspection for customs clearance; 3 years of practical psychiatry training with a psychiatrist in Ocala, Florida.
+- Training content for workers: complete, ready-to-use training systems (slides, trainer guide, handouts, quizzes, records, training matrix) delivered by the client's own quality manager. She prepares the content; she does not deliver training sessions.
+- Education: consultant to an educational company from its first day; since 2023 prepares IGCSE Chemistry content for a teacher in Dubai; personalised worksheets for children aged 2–6 (she home-schooled her own children with this method).
+- Websites: designed and hand-coded (HTML, CSS, JavaScript), hosted free on GitHub Pages, ready in 3–5 days; the only yearly cost is the domain (about $10–50). Also personal brands for consultants and doctors.
+
+## Main pages
+- [Home](https://karenmilad.com/): service finder, all services, reviews.
+- [Quality & ISO](https://karenmilad.com/quality.html): method (brainstorming, fishbone, risk matrix, HACCP), professional Excel sheets, training system for workers, standards and documents.
+- [Websites](https://karenmilad.com/websites.html): website design and build in 3–5 days, examples, packages, personal brand.
+- [About Karen](https://karenmilad.com/#about): experience since 2015.
 
 ## Services
-- [Worship song slides](https://karenmilad.com/services/ch_songs.html): Lyrics you provide, set on clean, readable slides for projection. From $1.50.
-- [Sermon or Bible study slides](https://karenmilad.com/services/ch_sermon.html): Verses, points and questions laid out for the screen. From $2.
-- [Church event and announcement slides](https://karenmilad.com/services/ch_event.html): Announcements, events and services shown clearly before and after the service. From $2.
-- [Church bulletin or newsletter](https://karenmilad.com/services/ch_bulletin.html): A weekly or monthly bulletin that is easy to read and print. From $3.
-- [Baptism, confirmation or appreciation certificates](https://karenmilad.com/services/ch_cert.html): Elegant certificates you can print for every name. From $4.
-- [Sunday school worksheets](https://karenmilad.com/services/ch_sunday.html): Bible stories and activities for children, ready to print. From $1.
-- [Church membership and contact list](https://karenmilad.com/services/ch_members.html): Members, families, birthdays and contacts in one searchable sheet. From $5.
-- [Donations and offerings tracker](https://karenmilad.com/services/ch_donations.html): Monthly totals by fund, with a clear summary. From $5.
-- [Serving rota and service schedule](https://karenmilad.com/services/ch_rota.html): Who serves when, with no clashes, ready to share. From $5.
-- [Church or Sunday school attendance](https://karenmilad.com/services/ch_attend.html): Weekly attendance with totals and follow-up flags. From $4.
-- [Class attendance and absence sheet](https://karenmilad.com/services/t_attend.html): Daily attendance with monthly totals per student. From $4.
-- [Gradebook with averages and ranks](https://karenmilad.com/services/t_grades.html): Marks, averages, grades and ranks calculated automatically. From $5.
-- [School or class timetable](https://karenmilad.com/services/t_timetable.html): Teachers, rooms and periods without clashes. From $5.
-- [Lesson plan template](https://karenmilad.com/services/t_lessonplan.html): A clean lesson plan you fill in every week. From $4.
-- [Exam or quiz paper formatting](https://karenmilad.com/services/t_exam.html): Questions, answer spaces and marks laid out neatly. From $1.
-- [Student report cards](https://karenmilad.com/services/t_report.html): Report cards ready to fill and print for each student. From $6.
-- [Interactive quiz or game slides](https://karenmilad.com/services/t_quiz.html): Click-to-reveal answers and scores for the classroom. From $2.
-- [Payroll sheet](https://karenmilad.com/services/co_payroll.html): Salaries, allowances, deductions and net pay calculated. From $8.
-- [Inventory and stock tracker](https://karenmilad.com/services/co_inventory.html): Stock in, stock out and reorder alerts. From $6.
-- [Sales tracker](https://karenmilad.com/services/co_sales.html): Sales by day, product and salesperson, with totals. From $5.
-- [Expense and petty cash tracker](https://karenmilad.com/services/co_expense.html): Every expense categorised, with monthly totals. From $5.
-- [Customer list and simple CRM](https://karenmilad.com/services/co_crm.html): Customers, follow-ups and status in one sheet. From $5.
-- [Project tracker and Gantt chart](https://karenmilad.com/services/co_project.html): Tasks, owners, dates and a timeline that updates itself. From $8.
-- [Employee leave and vacation tracker](https://karenmilad.com/services/co_leave.html): Balances, approvals and remaining days per employee. From $5.
-- [Purchase orders and supplier list](https://karenmilad.com/services/co_po.html): Orders, suppliers and delivery status tracked. From $5.
-- [Cash flow sheet](https://karenmilad.com/services/co_cashflow.html): Money in and out by month, with the closing balance. From $8.
-- [Monthly budget](https://karenmilad.com/services/co_budget.html): Planned against actual spending, with variances. From $5.
-- [Employee database](https://karenmilad.com/services/co_staff.html): Staff details, contracts and document expiry dates. From $5.
-- [Shift schedule](https://karenmilad.com/services/co_shift.html): Weekly shifts with hours per employee. From $5.
-- [Price list and quotation calculator](https://karenmilad.com/services/co_price.html): Pick items and quantities, get a quotation total. From $6.
-- [Chart or graph slide](https://karenmilad.com/services/mchart.html): A clear chart from your numbers, styled to match your deck. From $5.
-- [Timeline or roadmap slide](https://karenmilad.com/services/mtimeline.html): Dates and milestones turned into one clean visual. From $6.
-- [Process or flow diagram](https://karenmilad.com/services/mprocess.html): Steps, workflows or cycles shown as a clear diagram. From $6.
-- [Organisation chart](https://karenmilad.com/services/morg.html): Your team structure in a clean, editable chart. From $6.
-- [Fix or redesign a few slides](https://karenmilad.com/services/mfix.html): Quick fixes for crowded, misaligned or old-looking slides. From $3.
-- [Cover, agenda or section slides](https://karenmilad.com/services/mcover.html): The slides that set the tone, designed to stand out. From $3.
-- [Table turned into a visual](https://karenmilad.com/services/mtable.html): Dense tables redesigned so the key numbers stand out. From $4.
-- [Animations and transitions](https://karenmilad.com/services/manim.html): Clean, professional motion added to your deck. From $5.
-- [Apply your template to an existing deck](https://karenmilad.com/services/mtemplate.html): Your old slides moved onto your new template, neatly. From $6.
-- [Fix a heavy, slow or broken PowerPoint](https://karenmilad.com/services/mrepair.html): Large files compressed, broken fonts and layouts fixed. From $5.
-- [Icon set for your slides](https://karenmilad.com/services/micons.html): Matching icons in your colours, ready to use. From $5.
-- [Device mock-up of your slides](https://karenmilad.com/services/mmockup.html): Your slides shown on a laptop or phone for posts and portfolios. From $4.
-- [Table of contents, numbering & headers](https://karenmilad.com/services/wtoc.html): Automatic contents, page numbers and headers that update themselves. From $5.
-- [Fix or design tables](https://karenmilad.com/services/wtable.html): Tables that line up, fit the page and are easy to read. From $3.
-- [Letterhead or Word template](https://karenmilad.com/services/wletter.html): Branded letterhead or template your team can reuse. From $5.
-- [PDF pages to editable Word](https://karenmilad.com/services/wpdf.html): PDF pages rebuilt in Word so you can edit them. From $3.
-- [Fillable form](https://karenmilad.com/services/wform.html): A form people can fill on a computer, in Word or PDF. From $5.
-- [Certificate design](https://karenmilad.com/services/wcert.html): Certificates for courses, events or appreciation. From $4.
-- [Invoice or quotation template in Word](https://karenmilad.com/services/winvoice.html): A clean, branded invoice or quotation you can reuse. From $5.
-- [References and citations formatting](https://karenmilad.com/services/wcite.html): APA, Harvard, IEEE or your university style, applied correctly. From $5.
-- [Proofreading in English or Arabic](https://karenmilad.com/services/wproof.html): Spelling, grammar and consistency checked. From $3.
-- [Cover page design](https://karenmilad.com/services/wcover.html): A professional cover for reports, theses or proposals. From $3.
-- [Excel chart](https://karenmilad.com/services/xchart.html): A clear chart that updates with your data. From $4.
-- [Fix or write a formula](https://karenmilad.com/services/xformula.html): Broken or slow formulas fixed, or new ones written. From $3.
-- [Conditional formatting & highlights](https://karenmilad.com/services/xcond.html): Colours that flag late, high or missing values automatically. From $3.
-- [Drop-down lists & data validation](https://karenmilad.com/services/xdrop.html): Drop-downs and rules that stop wrong entries. From $3.
-- [Pivot table & summary](https://karenmilad.com/services/xpivot.html): Your data summarised by month, product or branch. From $5.
-- [PDF table to Excel](https://karenmilad.com/services/xpdf.html): Tables from PDFs converted and checked against the original. From $3.
-- [Match or merge two sheets](https://karenmilad.com/services/xlookup.html): XLOOKUP or INDEX-MATCH to join your lists correctly. From $4.
-- [Protect and lock a sheet](https://karenmilad.com/services/xprotect.html): Formulas locked so nobody breaks them by mistake. From $3.
-- [Invoice or quotation in Excel](https://karenmilad.com/services/xinvoice.html): Totals, tax and numbering calculated for you. From $5.
-- [Attendance or task tracker](https://karenmilad.com/services/xattend.html): A simple tracker with totals and status colours. From $5.
-- [Simple calculator sheet](https://karenmilad.com/services/xcalc.html): A sheet that does your repeated calculation in one step. From $5.
-- [One procedure (SOP)](https://karenmilad.com/services/isosop.html): A clear procedure written and formatted to your standard. From $8.
-- [Form or record template](https://karenmilad.com/services/isoform.html): Controlled forms with document number, revision and approval fields. From $3.
-- [Risk register](https://karenmilad.com/services/isorisk.html): Risks scored by likelihood and impact, with actions. From $8.
-- [Internal audit checklist](https://karenmilad.com/services/isoaudit.html): Questions mapped to the clauses of your standard. From $8.
-- [Nonconformity & corrective action (CAPA)](https://karenmilad.com/services/isocapa.html): A CAPA form and log that auditors expect to see. From $5.
-- [Document control master list](https://karenmilad.com/services/isodoc.html): Every document listed with number, revision and owner. From $5.
-- [Quality policy & objectives](https://karenmilad.com/services/isopolicy.html): A clear policy and measurable objectives. From $6.
-- [KPI tracking sheet](https://karenmilad.com/services/isokpi.html): Monthly KPIs with targets and charts. From $6.
-- [Calibration & maintenance schedule](https://karenmilad.com/services/isocal.html): Due dates and reminders for every instrument. From $6.
-- [Training matrix & records](https://karenmilad.com/services/isotrain.html): Who is trained on what, and when training is due. From $5.
-- [Free consultation](https://karenmilad.com/services/consult.html): Not sure what you need? Tell me about your project and I’ll help you plan it, at no cost. From Free.
-- [Express infographic in 2 hours](https://karenmilad.com/services/igexpress.html): Send a picture or an idea, and get a clean infographic back within 2 hours. From $5.
-- [Infographic design](https://karenmilad.com/services/infographic.html): Numbers, processes and timelines turned into one clear visual people actually read. From $5.
-- [Exact replica in Word, Excel or PowerPoint](https://karenmilad.com/services/replica.html): Any document, form, table or slide rebuilt exactly like the original, and fully editable. From $4.
-- [Presentation redesign](https://karenmilad.com/services/redesign.html): Your existing slides, rebuilt clean, clear and on-brand. From $6.
-- [PDF, Word or Google Slides to PowerPoint](https://karenmilad.com/services/convert.html): Locked files rebuilt as fully editable slides. From $4.
-- [New presentation from your text or idea](https://karenmilad.com/services/newpres.html): Send your text, or just the topic. I design it, and write it if you need. From $10.
-- [Master slides & PowerPoint templates](https://karenmilad.com/services/master.html): A real slide master your whole team can build on, not just a pretty file. From $10.
-- [Video in presentations](https://karenmilad.com/services/pptvideo.html): Videos merged into your slides so they play smoothly, or your whole deck turned into a video. From $6.
-- [International conference presentation](https://karenmilad.com/services/conference.html): Your talk built exactly to the conference template and speaker guidelines. From $12.
-- [Word formatting & document templates](https://karenmilad.com/services/wordfmt.html): Long Word documents made clean, consistent and easy to update. From $5.
-- [Proposals, quotations & reports in Word](https://karenmilad.com/services/docs.html): Branded Word templates that look professional and fill in fast. From $5.
-- [CV, cover letter & LinkedIn profile](https://karenmilad.com/services/cv.html): A clear, ATS-friendly CV in Arabic, English or both. From $5.
-- [Typing, fillable forms & certificates](https://karenmilad.com/services/typing.html): Scans, photos and handwriting turned into clean, editable Word files. From $2.50.
-- [Excel templates, trackers & dashboards](https://karenmilad.com/services/excel.html): Sheets that calculate for you, with no broken formulas. From $5.
-- [Excel dashboards & reports](https://karenmilad.com/services/xdash.html): Your numbers turned into a one-page view you can read in a minute. From $12.
-- [Budgets, financial models & cash flow in Excel](https://karenmilad.com/services/xfin.html): Clear financial sheets you can explain to a bank, a fund or a partner. From $15.
-- [Data cleanup, conversion & entry](https://karenmilad.com/services/xdata.html): Messy lists, PDFs and paper records turned into clean, usable Excel data. From $4.
-- [Excel formulas, automation & macros](https://karenmilad.com/services/xauto.html): Repeated manual work in Excel turned into one click. From $8.
-- [Coaching client documents](https://karenmilad.com/services/coachdocs.html): Everything a coach sends to clients, branded and ready to use. From $8.
-- [Fitness & nutrition trackers (Excel / Google Sheets)](https://karenmilad.com/services/coachsheets.html): Client sheets that track workouts, nutrition and progress automatically. From $8.
-- [Coaching programmes, guides & e-books](https://karenmilad.com/services/coachprog.html): Your programme turned into a guide clients love to follow. From $12.
-- [Funding application package (Saudi Arabia & GCC)](https://karenmilad.com/services/funding.html): Your project or idea presented the way funding bodies and government programmes expect. From $30.
-- [Investor pitch deck](https://karenmilad.com/services/pitch.html): A short, clear deck that tells investors why this business, why now and why you. From $18.
-- [Feasibility study preparation](https://karenmilad.com/services/feas.html): A structured feasibility study with market, technical and financial sections. From $25.
-- [Thesis & dissertation formatting](https://karenmilad.com/services/thesis.html): Your master’s or PhD thesis formatted exactly to your university’s rules, and print-ready. From $12.
-- [Thesis defense presentation & research poster](https://karenmilad.com/services/defense.html): A calm, clear defense deck and a poster that reads in 30 seconds. From $12.
-- [Lesson & lecture slides for schools and universities](https://karenmilad.com/services/lessons.html): Teaching slides built on how people actually learn, with modern methods applied. From $8.
-- [Worksheets for young children (ages 2–6)](https://karenmilad.com/services/kids.html): Tracing, letters, numbers and fine-motor sheets that little hands can actually use. From $4.
-- [Personalised learning worksheets](https://karenmilad.com/services/kidsme.html): Worksheets made for one child: their name, age and favourite things, turning the curriculum into play. From $6.
-- [Training course materials & accreditation file](https://karenmilad.com/services/training.html): Complete course materials, and the file accreditation bodies ask for. From $15.
-- [Psychology & medical presentations and handouts](https://karenmilad.com/services/health.html): Clinical talks, case presentations and patient handouts, designed with care. From $10.
-- [Company profile & business presentation](https://karenmilad.com/services/bizprofile.html): A profile that tells clients who you are, what you do and why you, in a few pages. From $15.
-- [Print-ready book conversion](https://karenmilad.com/services/printbook.html): Your book file turned into a print-ready PDF at the exact trim size your printer needs. From $15.
-- [Book design & layout](https://karenmilad.com/services/book.html): Your manuscript laid out like a published book, for print or e-book. From $20.
-- [Translation: Arabic, English, German, Spanish](https://karenmilad.com/services/translation.html): Translation that reads naturally, delivered in the same layout. From $8.
-- [Writing & editing](https://karenmilad.com/services/writing.html): Clear, original writing and careful proofreading. From $8.
-- [Contract typing, formatting & translation for lawyers](https://karenmilad.com/services/legal.html): Your contracts and legal documents typed, formatted and translated in full confidentiality. From $8.
-- [Website design & build](https://karenmilad.com/websites.html): A fast, modern website designed and coded by hand, ready in 3–5 days, hosted free on GitHub Pages; yearly cost only the domain (about $10–50). From $250 to $1,000.
-- [Quality & ISO consulting](https://karenmilad.com/quality.html): ISO 9001, ISO 22000/HACCP, ISO/IEC 17025, ISO 31000 documentation and audit readiness.
+- [Worship song slides](https://karenmilad.com/services/ch_songs.html): Lyrics you provide, set on clean, readable slides for projection.
+- [Sermon or Bible study slides](https://karenmilad.com/services/ch_sermon.html): Verses, points and questions laid out for the screen.
+- [Church event and announcement slides](https://karenmilad.com/services/ch_event.html): Announcements, events and services shown clearly before and after the service.
+- [Church bulletin or newsletter](https://karenmilad.com/services/ch_bulletin.html): A weekly or monthly bulletin that is easy to read and print.
+- [Baptism, confirmation or appreciation certificates](https://karenmilad.com/services/ch_cert.html): Elegant certificates you can print for every name.
+- [Sunday school worksheets](https://karenmilad.com/services/ch_sunday.html): Bible stories and activities for children, ready to print.
+- [Church membership and contact list](https://karenmilad.com/services/ch_members.html): Members, families, birthdays and contacts in one searchable sheet.
+- [Donations and offerings tracker](https://karenmilad.com/services/ch_donations.html): Monthly totals by fund, with a clear summary.
+- [Serving rota and service schedule](https://karenmilad.com/services/ch_rota.html): Who serves when, with no clashes, ready to share.
+- [Church or Sunday school attendance](https://karenmilad.com/services/ch_attend.html): Weekly attendance with totals and follow-up flags.
+- [Class attendance and absence sheet](https://karenmilad.com/services/t_attend.html): Daily attendance with monthly totals per student.
+- [Gradebook with averages and ranks](https://karenmilad.com/services/t_grades.html): Marks, averages, grades and ranks calculated automatically.
+- [School or class timetable](https://karenmilad.com/services/t_timetable.html): Teachers, rooms and periods without clashes.
+- [Lesson plan template](https://karenmilad.com/services/t_lessonplan.html): A clean lesson plan you fill in every week.
+- [Exam or quiz paper formatting](https://karenmilad.com/services/t_exam.html): Questions, answer spaces and marks laid out neatly.
+- [Student report cards](https://karenmilad.com/services/t_report.html): Report cards ready to fill and print for each student.
+- [Interactive quiz or game slides](https://karenmilad.com/services/t_quiz.html): Click-to-reveal answers and scores for the classroom.
+- [Payroll sheet](https://karenmilad.com/services/co_payroll.html): Salaries, allowances, deductions and net pay calculated.
+- [Inventory and stock tracker](https://karenmilad.com/services/co_inventory.html): Stock in, stock out and reorder alerts.
+- [Sales tracker](https://karenmilad.com/services/co_sales.html): Sales by day, product and salesperson, with totals.
+- [Expense and petty cash tracker](https://karenmilad.com/services/co_expense.html): Every expense categorised, with monthly totals.
+- [Customer list and simple CRM](https://karenmilad.com/services/co_crm.html): Customers, follow-ups and status in one sheet.
+- [Project tracker and Gantt chart](https://karenmilad.com/services/co_project.html): Tasks, owners, dates and a timeline that updates itself.
+- [Employee leave and vacation tracker](https://karenmilad.com/services/co_leave.html): Balances, approvals and remaining days per employee.
+- [Purchase orders and supplier list](https://karenmilad.com/services/co_po.html): Orders, suppliers and delivery status tracked.
+- [Cash flow sheet](https://karenmilad.com/services/co_cashflow.html): Money in and out by month, with the closing balance.
+- [Monthly budget](https://karenmilad.com/services/co_budget.html): Planned against actual spending, with variances.
+- [Employee database](https://karenmilad.com/services/co_staff.html): Staff details, contracts and document expiry dates.
+- [Shift schedule](https://karenmilad.com/services/co_shift.html): Weekly shifts with hours per employee.
+- [Price list and quotation calculator](https://karenmilad.com/services/co_price.html): Pick items and quantities, get a quotation total.
+- [Chart or graph slide](https://karenmilad.com/services/mchart.html): A clear chart from your numbers, styled to match your deck.
+- [Timeline or roadmap slide](https://karenmilad.com/services/mtimeline.html): Dates and milestones turned into one clean visual.
+- [Process or flow diagram](https://karenmilad.com/services/mprocess.html): Steps, workflows or cycles shown as a clear diagram.
+- [Organisation chart](https://karenmilad.com/services/morg.html): Your team structure in a clean, editable chart.
+- [Fix or redesign a few slides](https://karenmilad.com/services/mfix.html): Quick fixes for crowded, misaligned or old-looking slides.
+- [Cover, agenda or section slides](https://karenmilad.com/services/mcover.html): The slides that set the tone, designed to stand out.
+- [Table turned into a visual](https://karenmilad.com/services/mtable.html): Dense tables redesigned so the key numbers stand out.
+- [Animations and transitions](https://karenmilad.com/services/manim.html): Clean, professional motion added to your deck.
+- [Apply your template to an existing deck](https://karenmilad.com/services/mtemplate.html): Your old slides moved onto your new template, neatly.
+- [Fix a heavy, slow or broken PowerPoint](https://karenmilad.com/services/mrepair.html): Large files compressed, broken fonts and layouts fixed.
+- [Icon set for your slides](https://karenmilad.com/services/micons.html): Matching icons in your colours, ready to use.
+- [Device mock-up of your slides](https://karenmilad.com/services/mmockup.html): Your slides shown on a laptop or phone for posts and portfolios.
+- [Table of contents, numbering & headers](https://karenmilad.com/services/wtoc.html): Automatic contents, page numbers and headers that update themselves.
+- [Fix or design tables](https://karenmilad.com/services/wtable.html): Tables that line up, fit the page and are easy to read.
+- [Letterhead or Word template](https://karenmilad.com/services/wletter.html): Branded letterhead or template your team can reuse.
+- [PDF pages to editable Word](https://karenmilad.com/services/wpdf.html): PDF pages rebuilt in Word so you can edit them.
+- [Fillable form](https://karenmilad.com/services/wform.html): A form people can fill on a computer, in Word or PDF.
+- [Certificate design](https://karenmilad.com/services/wcert.html): Certificates for courses, events or appreciation.
+- [Invoice or quotation template in Word](https://karenmilad.com/services/winvoice.html): A clean, branded invoice or quotation you can reuse.
+- [References and citations formatting](https://karenmilad.com/services/wcite.html): APA, Harvard, IEEE or your university style, applied correctly.
+- [Proofreading in English or Arabic](https://karenmilad.com/services/wproof.html): Spelling, grammar and consistency checked.
+- [Cover page design](https://karenmilad.com/services/wcover.html): A professional cover for reports, theses or proposals.
+- [Excel chart](https://karenmilad.com/services/xchart.html): A clear chart that updates with your data.
+- [Fix or write a formula](https://karenmilad.com/services/xformula.html): Broken or slow formulas fixed, or new ones written.
+- [Conditional formatting & highlights](https://karenmilad.com/services/xcond.html): Colours that flag late, high or missing values automatically.
+- [Drop-down lists & data validation](https://karenmilad.com/services/xdrop.html): Drop-downs and rules that stop wrong entries.
+- [Pivot table & summary](https://karenmilad.com/services/xpivot.html): Your data summarised by month, product or branch.
+- [PDF table to Excel](https://karenmilad.com/services/xpdf.html): Tables from PDFs converted and checked against the original.
+- [Match or merge two sheets](https://karenmilad.com/services/xlookup.html): XLOOKUP or INDEX-MATCH to join your lists correctly.
+- [Protect and lock a sheet](https://karenmilad.com/services/xprotect.html): Formulas locked so nobody breaks them by mistake.
+- [Invoice or quotation in Excel](https://karenmilad.com/services/xinvoice.html): Totals, tax and numbering calculated for you.
+- [Attendance or task tracker](https://karenmilad.com/services/xattend.html): A simple tracker with totals and status colours.
+- [Simple calculator sheet](https://karenmilad.com/services/xcalc.html): A sheet that does your repeated calculation in one step.
+- [One procedure (SOP)](https://karenmilad.com/services/isosop.html): A clear procedure written and formatted to your standard.
+- [Form or record template](https://karenmilad.com/services/isoform.html): Controlled forms with document number, revision and approval fields.
+- [Risk register](https://karenmilad.com/services/isorisk.html): Risks scored by likelihood and impact, with actions.
+- [Internal audit checklist](https://karenmilad.com/services/isoaudit.html): Questions mapped to the clauses of your standard.
+- [Nonconformity & corrective action (CAPA)](https://karenmilad.com/services/isocapa.html): A CAPA form and log that auditors expect to see.
+- [Document control master list](https://karenmilad.com/services/isodoc.html): Every document listed with number, revision and owner.
+- [Quality policy & objectives](https://karenmilad.com/services/isopolicy.html): A clear policy and measurable objectives.
+- [KPI tracking sheet](https://karenmilad.com/services/isokpi.html): Monthly KPIs with targets and charts.
+- [Calibration & maintenance schedule](https://karenmilad.com/services/isocal.html): Due dates and reminders for every instrument.
+- [Training matrix & records](https://karenmilad.com/services/isotrain.html): Who is trained on what, and when training is due.
+- [Free consultation](https://karenmilad.com/services/consult.html): Not sure what you need? Tell me about your project and I’ll help you plan it, at no cost.
+- [Express infographic in 2 hours](https://karenmilad.com/services/igexpress.html): Send a picture or an idea, and get a clean infographic back within 2 hours.
+- [Infographic design](https://karenmilad.com/services/infographic.html): Numbers, processes and timelines turned into one clear visual people actually read.
+- [Exact replica in Word, Excel or PowerPoint](https://karenmilad.com/services/replica.html): Any document, form, table or slide rebuilt exactly like the original, and fully editable.
+- [Presentation redesign](https://karenmilad.com/services/redesign.html): Your existing slides, rebuilt clean, clear and on-brand.
+- [PDF, Word or Google Slides to PowerPoint](https://karenmilad.com/services/convert.html): Locked files rebuilt as fully editable slides.
+- [New presentation from your text or idea](https://karenmilad.com/services/newpres.html): Send your text, or just the topic. I design it, and write it if you need.
+- [Master slides & PowerPoint templates](https://karenmilad.com/services/master.html): A real slide master your whole team can build on, not just a pretty file.
+- [Video in presentations](https://karenmilad.com/services/pptvideo.html): Videos merged into your slides so they play smoothly, or your whole deck turned into a video.
+- [International conference presentation](https://karenmilad.com/services/conference.html): Your talk built exactly to the conference template and speaker guidelines.
+- [Word formatting & document templates](https://karenmilad.com/services/wordfmt.html): Long Word documents made clean, consistent and easy to update.
+- [Proposals, quotations & reports in Word](https://karenmilad.com/services/docs.html): Branded Word templates that look professional and fill in fast.
+- [CV, cover letter & LinkedIn profile](https://karenmilad.com/services/cv.html): A clear, ATS-friendly CV in Arabic, English or both.
+- [Typing, fillable forms & certificates](https://karenmilad.com/services/typing.html): Scans, photos and handwriting turned into clean, editable Word files.
+- [Excel templates, trackers & dashboards](https://karenmilad.com/services/excel.html): Sheets that calculate for you, with no broken formulas.
+- [Excel dashboards & reports](https://karenmilad.com/services/xdash.html): Your numbers turned into a one-page view you can read in a minute.
+- [Budgets, financial models & cash flow in Excel](https://karenmilad.com/services/xfin.html): Clear financial sheets you can explain to a bank, a fund or a partner.
+- [Data cleanup, conversion & entry](https://karenmilad.com/services/xdata.html): Messy lists, PDFs and paper records turned into clean, usable Excel data.
+- [Excel formulas, automation & macros](https://karenmilad.com/services/xauto.html): Repeated manual work in Excel turned into one click.
+- [Coaching client documents](https://karenmilad.com/services/coachdocs.html): Everything a coach sends to clients, branded and ready to use.
+- [Fitness & nutrition trackers (Excel / Google Sheets)](https://karenmilad.com/services/coachsheets.html): Client sheets that track workouts, nutrition and progress automatically.
+- [Coaching programmes, guides & e-books](https://karenmilad.com/services/coachprog.html): Your programme turned into a guide clients love to follow.
+- [Funding application package (Saudi Arabia & GCC)](https://karenmilad.com/services/funding.html): Your project or idea presented the way funding bodies and government programmes expect.
+- [Investor pitch deck](https://karenmilad.com/services/pitch.html): A short, clear deck that tells investors why this business, why now and why you.
+- [Feasibility study preparation](https://karenmilad.com/services/feas.html): A structured feasibility study with market, technical and financial sections.
+- [Thesis & dissertation formatting](https://karenmilad.com/services/thesis.html): Your master’s or PhD thesis formatted exactly to your university’s rules, and print-ready.
+- [Thesis defense presentation & research poster](https://karenmilad.com/services/defense.html): A calm, clear defense deck and a poster that reads in 30 seconds.
+- [Lesson & lecture slides for schools and universities](https://karenmilad.com/services/lessons.html): Teaching slides built on how people actually learn, with modern methods applied.
+- [Worksheets for young children (ages 2–6)](https://karenmilad.com/services/kids.html): Tracing, letters, numbers and fine-motor sheets that little hands can actually use.
+- [Personalised learning worksheets](https://karenmilad.com/services/kidsme.html): Worksheets made for one child: their name, age and favourite things, turning the curriculum into play.
+- [Training course materials & accreditation file](https://karenmilad.com/services/training.html): Complete course materials, and the file accreditation bodies ask for.
+- [Psychology & medical presentations and handouts](https://karenmilad.com/services/health.html): Clinical talks, case presentations and patient handouts, designed with care.
+- [Company profile & business presentation](https://karenmilad.com/services/bizprofile.html): A profile that tells clients who you are, what you do and why you, in a few pages.
+- [Print-ready book conversion](https://karenmilad.com/services/printbook.html): Your book file turned into a print-ready PDF at the exact trim size your printer needs.
+- [Book design & layout](https://karenmilad.com/services/book.html): Your manuscript laid out like a published book, for print or e-book.
+- [Translation: Arabic, English, German, Spanish](https://karenmilad.com/services/translation.html): Translation that reads naturally, delivered in the same layout.
+- [Writing & editing](https://karenmilad.com/services/writing.html): Clear, original writing and careful proofreading.
+- [Contract typing, formatting & translation for lawyers](https://karenmilad.com/services/legal.html): Your contracts and legal documents typed, formatted and translated in full confidentiality.
