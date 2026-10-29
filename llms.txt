@@ -1,6 +1,6 @@
 # Karen Milad · Quality consultant and designer (karenmilad.com)
 
-> Karen Milad is a quality consultant in quality since 2016 (factory training during her studies, working since 2020) and a full-time freelance designer since 2023, rated 5/5 on freelance platforms. She prepares ready-to-use content herself, by hand, with no AI and no outsourcing: ISO documentation, risk analysis, HACCP plans, training content for workers, presentations, Word documents, Excel sheets, children's learning material and hand-coded websites. She works in English, Arabic, German and Spanish, for clients worldwide, entirely by WhatsApp and email (no calls, visits or live sessions).
+> Karen Milad is a quality consultant about 10 years of quality work across food, inspection, consulting and calibration, today a quality manager, and a full-time freelance documentation designer, rated 5/5 on freelance platforms. She prepares ready-to-use content herself, by hand, with no AI and no outsourcing: ISO documentation, risk analysis, HACCP plans, training content for workers, presentations, Word documents, Excel sheets, children's learning material and hand-coded websites. She works in English, Arabic, German and Spanish, for clients worldwide, entirely by WhatsApp and email (no calls, visits or live sessions).
 
 Contact: WhatsApp +20 120 708 2281 · karenmilad2018@gmail.com · Freelancer.com: https://www.freelancer.com/u/Karenmilad2018 · Fiverr: https://www.fiverr.com/s/K33Zk3l
 How to work with her: free sample of the client's own content within 12–24 hours, fixed prices quoted on request, payment after approval, unlimited revisions for 2 weeks after final delivery. Client files are kept confidential (she applies the confidentiality rules of ISO/IEC 17025:2017).
@@ -8,16 +8,16 @@ How to work with her: free sample of the client's own content within 12–24 hou
 ## Expertise
 - Quality and ISO: ISO 9001:2015, ISO 22000:2018 with HACCP, ISO/IEC 17025:2017, ISO 31000:2018.
 - Methods: brainstorming, fishbone (Ishikawa) root-cause analysis, risk analysis with a severity × likelihood risk matrix, HACCP (7 principles of the Codex Alimentarius), Six Sigma, CAPA, internal audits.
-- Background: BSc in microbiology taught in English, with quality management in the last two years (2016–2020), plus factory training during her studies; quality control in an export bakery factory (2020); quality system for a pest control company in the USA; inspector (shipment inspection for customs clearance) and quality consultant from 2021, with quality systems for meat, dairy and cosmetics companies; quality at a global food company (2022, about one year); quality manager of a scientific instrument maintenance and calibration company; full-time freelancer since 2023; practical psychiatry training with a psychiatrist in Ocala, Florida.
+- Background: microbiology and quality management (studied in English, with factory training); quality control and food safety in food factories and a global food company; shipment inspection for customs clearance; quality systems for meat, dairy, cosmetics and pest control companies (one in the USA); quality manager of a scientific instrument maintenance and calibration company (ISO/IEC 17025:2017); creative training content for many companies; practical psychiatry training with a psychiatrist in Ocala, Florida.
 - Training content for workers: complete, ready-to-use training systems (slides, trainer guide, handouts, quizzes, records, training matrix) delivered by the client's own quality manager. She prepares the content; she does not deliver training sessions.
-- Education: consultant to an educational company from its first day; since 2023 prepares IGCSE Chemistry content for a teacher in Dubai; personalised worksheets for children aged 2–6 (she home-schooled her own children with this method).
+- Education: consultant to an educational company from its first day; for three years has prepared IGCSE Chemistry content for a teacher in Dubai; personalised worksheets for children aged 2–6 (she home-schooled her own children with this method).
 - Websites: designed and hand-coded (HTML, CSS, JavaScript), hosted free on GitHub Pages, ready in 3–5 days; the only yearly cost is the domain (about $10–50). Also personal brands for consultants and doctors.
 
 ## Main pages
 - [Home](https://karenmilad.com/): service finder, all services, reviews.
 - [Quality & ISO](https://karenmilad.com/quality.html): method (brainstorming, fishbone, risk matrix, HACCP), professional Excel sheets, training system for workers, standards and documents.
 - [Websites](https://karenmilad.com/websites.html): website design and build in 3–5 days, examples, packages, personal brand.
-- [About Karen](https://karenmilad.com/#about): experience since 2016.
+- [About Karen](https://karenmilad.com/#about): her experience.
 
 ## Services
 - [Worship song slides](https://karenmilad.com/services/ch_songs.html): Lyrics you provide, set on clean, readable slides for projection.
