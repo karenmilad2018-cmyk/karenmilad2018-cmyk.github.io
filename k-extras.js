@@ -4,6 +4,8 @@
    from / to: the hours you are usually online, Cairo time (24h clock). 9 and 23 = 9:00 AM to 11:00 PM
 */
 window.KAREN = window.KAREN || { from: 9, to: 23 };
+/* ?lang=ar etc. in any link opens the site in that language */
+(function () { var m = /[?&]lang=(en|ar|de|es)\b/.exec(location.search || ''); if (m) try { localStorage.setItem('karen-lang', m[1]); } catch (e) {} })();
 
 /* Contact and payment go through Freelancer.com only: every contact button opens the Freelancer profile. */
 window.KAREN_PLATFORMS = {
@@ -218,6 +220,7 @@ window.KAREN_PLATFORMS = {
   var SHIELD = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>';
   var fli;
   function drawFlInfo() {
+    if (document.getElementById('k-home-v2')) return; // the home page explains Freelancer.com itself
     if (!VIA) return;
     var L = FLI[lang()] || FLI.en;
     if (!fli) {
@@ -234,7 +237,7 @@ window.KAREN_PLATFORMS = {
     '#k-fli .card{display:none;position:absolute;bottom:44px;inset-inline-end:0;width:300px;max-width:calc(100vw - 36px);background:#fff;color:#0E1A2B;border-radius:16px;padding:16px 16px 14px;box-shadow:0 24px 50px rgba(14,26,43,.25);border:1px solid #E2E8EC}' +
     '#k-fli.open .card{display:block}#k-fli .card strong{display:flex;align-items:center;gap:7px;font-size:15px;color:#1E3FA8;margin-bottom:6px}#k-fli .card p{margin:0;font-size:13.5px;line-height:1.55;color:#3E4650}' +
     '#k-fli .x{position:absolute;top:6px;inset-inline-end:8px;border:0;background:none;font-size:20px;cursor:pointer;color:#7A8290}' +
-    '@media (max-width:640px){#k-fli{bottom:calc(84px + env(safe-area-inset-bottom,0px))}#k-fli .q span{display:none}}';
+    '@media (max-width:640px){#k-fli{display:none}}';
   var st2 = document.createElement('style'); st2.textContent = css2; (document.head || document.documentElement).appendChild(st2);
 
   /* ---------- exit-intent pop-up (desktop only) ---------- */
@@ -335,6 +338,7 @@ window.KAREN_PLATFORMS = {
   function onWebPage() { return /websites\.html/.test(location.pathname); }
   var season, rotT, rotI = 0;
   function drawSeason() {
+    if (season) { season.remove(); season = null; } return; // the bar is off: fewer things on screen
     if (onWebPage() || ss('k-bar-off')) { if (season) { season.remove(); season = null; } return; }
     var t = T(), w = WEBAD[lang()] || WEBAD.en, msgs = [];
     msgs.push({ h: w.h, p: w.p + (window.KAREN_HIDE ? '' : w.pr), b: '<a href="' + base() + 'websites.html">' + esc(w.b) + '</a>' });
