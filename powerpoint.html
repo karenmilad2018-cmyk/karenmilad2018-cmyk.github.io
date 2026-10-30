@@ -121,4 +121,4 @@ function sync(){var l=L();if(document.documentElement.lang!==l)document.document
 sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
 if(sel)sel.addEventListener('change',function(){try{localStorage.setItem('karen-lang',sel.value)}catch(e){}setTimeout(function(){if(document.documentElement.lang!==sel.value){document.documentElement.lang=sel.value;}sync();},0);});
 var f=document.getElementById('kc-f');if(f&&window.matchMedia&&matchMedia('(max-width:620px)').matches)[].forEach.call(f.querySelectorAll('details'),function(d){d.removeAttribute('open')});
-})();</script></body></html>
+})();</script><script src="k-guide.js" defer></script></body></html>

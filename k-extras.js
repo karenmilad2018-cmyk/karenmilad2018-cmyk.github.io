@@ -36,7 +36,7 @@ window.KAREN_PLATFORMS = {
     en: {
       flB: 'Hire me on Freelancer.com',
       mail: 'Message me on Freelancer.com', subj: 'Detailed quotation request',
-      on: 'Online now', off: 'Back at {t}', fab: 'Message me on Freelancer.com',
+      on: 'Online now', off: 'Back at {t}', fab: 'Message me, free and safe',
       wa: 'Hi Karen! I’d like a detailed quotation.',
       exitT: 'Before you go…', exitP: 'Send me your file now and get a detailed quotation within 12–24 hours. You pay nothing unless you’re happy.', exitB: 'Message me on Freelancer.com', no: 'No thanks', close: 'Close',
       toastT: 'Got your file ready?', toastP: 'Send it to me and I’ll reply with the exact price and a detailed quotation.', toastB: 'Send on Freelancer.com',
@@ -57,7 +57,7 @@ window.KAREN_PLATFORMS = {
     ar: {
       flB: 'تواصل معي على فريلانسر',
       mail: 'راسلني على Freelancer.com', subj: 'طلب عرض سعر مفصل',
-      on: 'متاحة الآن', off: 'أعود الساعة {t}', fab: 'راسلني على Freelancer.com',
+      on: 'متاحة الآن', off: 'أعود الساعة {t}', fab: 'راسلني مجاناً وبأمان',
       wa: 'مرحباً كارين! أريد عرض سعر مفصل لمشروعي.',
       exitT: 'قبل أن تغادر…', exitP: 'أرسل ملفك الآن واحصل على عرض سعر مفصل خلال ١٢–٢٤ ساعة. لن تدفع شيئاً إلا إذا كنت راضياً.', exitB: 'راسلني على Freelancer.com', no: 'لا، شكراً', close: 'إغلاق',
       toastT: 'ملفك جاهز؟', toastP: 'أرسله لي وسأرد عليك بالسعر الدقيق وعرض سعر مفصل.', toastB: 'أرسل عبر Freelancer.com',
@@ -78,7 +78,7 @@ window.KAREN_PLATFORMS = {
     de: {
       flB: 'Auf Freelancer beauftragen',
       mail: 'Schreiben Sie mir auf Freelancer.com', subj: 'Anfrage: Detailliertes Angebot',
-      on: 'Jetzt online', off: 'Zurück um {t}', fab: 'Auf Freelancer.com schreiben',
+      on: 'Jetzt online', off: 'Zurück um {t}', fab: 'Schreiben Sie mir, kostenlos und sicher',
       wa: 'Hallo Karen! Ich hätte gern ein detailliertes Angebot.',
       exitT: 'Bevor Sie gehen…', exitP: 'Senden Sie mir jetzt Ihre Datei und erhalten Sie in 12–24 Stunden ein detailliertes Angebot. Sie zahlen nur, wenn Sie zufrieden sind.', exitB: 'Auf Freelancer.com schreiben', no: 'Nein, danke', close: 'Schließen',
       toastT: 'Datei bereit?', toastP: 'Senden Sie sie mir, und ich antworte mit dem genauen Preis und einem detaillierten Angebot.', toastB: 'Über Freelancer.com senden',
@@ -99,7 +99,7 @@ window.KAREN_PLATFORMS = {
     es: {
       flB: 'Contrátame en Freelancer',
       mail: 'Escríbeme en Freelancer.com', subj: 'Solicitud de presupuesto detallado',
-      on: 'En línea ahora', off: 'Vuelvo a las {t}', fab: 'Escríbeme en Freelancer.com',
+      on: 'En línea ahora', off: 'Vuelvo a las {t}', fab: 'Escríbeme, gratis y seguro',
       wa: '¡Hola Karen! Quisiera un presupuesto detallado.',
       exitT: 'Antes de irte…', exitP: 'Envíame tu archivo ahora y recibe un presupuesto detallado en 12–24 horas. No pagas nada si no quedas contento.', exitB: 'Escríbeme en Freelancer.com', no: 'No, gracias', close: 'Cerrar',
       toastT: '¿Tienes tu archivo listo?', toastP: 'Envíamelo y te respondo con el precio exacto y un presupuesto detallado.', toastB: 'Enviar por Freelancer.com',
@@ -193,19 +193,19 @@ window.KAREN_PLATFORMS = {
     '.kx-mini b{height:16px;border-radius:5px;background:linear-gradient(90deg,#0E1A2B,#5B4B8A);width:0;animation:kxGrow 2.4s ease infinite}' +
     '.kx-mini u{height:6px;border-radius:3px;background:#DCE5E9;width:0;animation:kxGrow 2.4s ease .3s infinite}.kx-mini u+u{animation-delay:.6s}' +
     '@keyframes kxGrow{0%{width:0}50%,100%{width:85%}}';
-  css += '@media (min-width:641px){#k-fab{display:none!important}}#k-fab .l{display:none!important}#k-fab.kx-via .b{background:#2D5BE3;width:auto;height:56px;border-radius:999px;padding:0 20px 0 16px}#k-fab .fm{display:flex;align-items:center;gap:8px;color:#fff;font:800 17px/1 Manrope,system-ui,sans-serif;letter-spacing:-.2px}#k-fab .fw i{font-style:normal;font-weight:600;opacity:.8}@media (max-width:640px){#k-fab.kx-via .b{height:50px;padding:0 16px 0 12px}#k-fab .fm{font-size:15px}}#k-fab.kx-via.pulse .b{animation:kxPulseB 1.2s ease-out 3}@keyframes kxPulseB{0%{box-shadow:0 0 0 0 rgba(45,91,227,.55),0 10px 24px rgba(0,0,0,.22)}100%{box-shadow:0 0 0 22px rgba(45,91,227,0),0 10px 24px rgba(0,0,0,.22)}}#k-fab.kx-via .l{background:#fff;color:#0E1A2B;font-weight:700}html.k-via .k-online,html.k-via [data-k-online]{display:none!important}html.k-via a[data-via].wa,html.k-via a[data-via][class*="wa"],html.k-via a[data-via].btn-wa,html.k-via a.k-via-btn{background:#2D5BE3!important;border-color:#2D5BE3!important;color:#fff!important;box-shadow:0 10px 24px rgba(45,91,227,.28)!important}';
+  css += '#k-fab.kx-via{gap:12px}#k-fab.kx-via .b{width:62px;height:62px;border-radius:50%;padding:0;background:radial-gradient(circle at 30% 25%,#5B86FF,#2D5BE3 60%,#1F45C2);box-shadow:0 12px 28px rgba(45,91,227,.45);position:relative}#k-fab.kx-via .b svg{width:32px;height:32px}#k-fab .bd{position:absolute;top:-3px;inset-inline-end:-3px;width:20px;height:20px;border-radius:50%;background:#22C55E;border:3px solid #fff}#k-fab.kx-via .l{display:flex;background:#fff;color:#0E1A2B;font-weight:800;font-size:14px}#k-fab.kx-via .l small{font-weight:600;color:#5E6470;font-size:12px}@media (max-width:640px){#k-fab.kx-via .l{display:none}#k-fab.kx-via .b{width:58px;height:58px}}#k-fab.kx-via.pulse .b{animation:kxPulseB 1.4s ease-out 3}@keyframes kxPulseB{0%{box-shadow:0 0 0 0 rgba(45,91,227,.55),0 12px 28px rgba(45,91,227,.45)}100%{box-shadow:0 0 0 24px rgba(45,91,227,0),0 12px 28px rgba(45,91,227,.45)}}#k-fab.kx-via:hover .b{transform:scale(1.07)}';
   var st = document.createElement('style'); st.textContent = css; (document.head || document.documentElement).appendChild(st);
 
 
   var VIA_SVG = '<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>';
-  var FL_MARK = '<span class="fm">' + VIA_SVG + '<span class="fw">Freelancer<i>.com</i></span></span>';
+  var CHAT_SVG = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a7.5 7.5 0 0 1-11 6.6L4 19.5l1.4-4.6A7.5 7.5 0 1 1 20 11.5z"/><path d="M9 11.5l2 2 4-4"/></svg>';
   /* ---------- Freelancer.com contact button ---------- */
   var fab, lastL = '';
   function drawFab() {
     if (!fab) { fab = document.createElement('a'); fab.id = 'k-fab'; fab.className = 'kx'; fab.target = '_blank'; fab.rel = 'noopener'; document.body.appendChild(fab); }
     var t = T(), s = status();
     fab.setAttribute('dir', dir()); fab.href = waUrl(); fab.setAttribute('aria-label', t.fab);
-    if (VIA) { fab.classList.add('kx-via'); fab.setAttribute('aria-label', t.flB); fab.innerHTML = '<span class="b">' + FL_MARK + '</span><span class="l">' + esc(t.flB) + ' · ' + esc(VIA.proof[lang()] || VIA.proof.en) + '</span>'; return; }
+    if (VIA) { fab.classList.add('kx-via'); fab.setAttribute('aria-label', t.flB); fab.innerHTML = '<span class="b">' + CHAT_SVG + (s.on ? '<i class="bd"></i>' : '') + '</span><span class="l" style="flex-direction:column;align-items:flex-start;gap:0;line-height:1.25">' + esc(t.fab) + '<small>Freelancer.com · ' + esc(VIA.proof[lang()] || VIA.proof.en) + '</small></span>'; return; }
     fab.innerHTML = '<span class="b">' + VIA_SVG + '</span><span class="l"><span class="d' + (s.on ? ' on' : '') + '"></span>' + esc(s.on ? t.on : t.off.replace('{t}', s.back)) + '</span>';
   }
 
