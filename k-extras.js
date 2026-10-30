@@ -193,7 +193,7 @@ window.KAREN_PLATFORMS = {
     '.kx-mini b{height:16px;border-radius:5px;background:linear-gradient(90deg,#0E1A2B,#5B4B8A);width:0;animation:kxGrow 2.4s ease infinite}' +
     '.kx-mini u{height:6px;border-radius:3px;background:#DCE5E9;width:0;animation:kxGrow 2.4s ease .3s infinite}.kx-mini u+u{animation-delay:.6s}' +
     '@keyframes kxGrow{0%{width:0}50%,100%{width:85%}}';
-  css += '#k-fab.kx-via .b{background:#2D5BE3;width:auto;height:56px;border-radius:999px;padding:0 20px 0 16px}#k-fab .fm{display:flex;align-items:center;gap:8px;color:#fff;font:800 17px/1 Manrope,system-ui,sans-serif;letter-spacing:-.2px}#k-fab .fw i{font-style:normal;font-weight:600;opacity:.8}@media (max-width:640px){#k-fab.kx-via .b{height:50px;padding:0 16px 0 12px}#k-fab .fm{font-size:15px}}#k-fab.kx-via.pulse .b{animation:kxPulseB 1.2s ease-out 3}@keyframes kxPulseB{0%{box-shadow:0 0 0 0 rgba(45,91,227,.55),0 10px 24px rgba(0,0,0,.22)}100%{box-shadow:0 0 0 22px rgba(45,91,227,0),0 10px 24px rgba(0,0,0,.22)}}#k-fab.kx-via .l{background:#fff;color:#0E1A2B;font-weight:700}html.k-via .k-online,html.k-via [data-k-online]{display:none!important}html.k-via a[data-via] svg{display:none!important}html.k-via a[data-via].wa,html.k-via a[data-via][class*="wa"],html.k-via a[data-via].btn-wa,html.k-via a.k-via-btn{background:#2D5BE3!important;border-color:#2D5BE3!important;color:#fff!important;box-shadow:0 10px 24px rgba(45,91,227,.28)!important}';
+  css += '@media (min-width:641px){#k-fab{display:none!important}}#k-fab .l{display:none!important}#k-fab.kx-via .b{background:#2D5BE3;width:auto;height:56px;border-radius:999px;padding:0 20px 0 16px}#k-fab .fm{display:flex;align-items:center;gap:8px;color:#fff;font:800 17px/1 Manrope,system-ui,sans-serif;letter-spacing:-.2px}#k-fab .fw i{font-style:normal;font-weight:600;opacity:.8}@media (max-width:640px){#k-fab.kx-via .b{height:50px;padding:0 16px 0 12px}#k-fab .fm{font-size:15px}}#k-fab.kx-via.pulse .b{animation:kxPulseB 1.2s ease-out 3}@keyframes kxPulseB{0%{box-shadow:0 0 0 0 rgba(45,91,227,.55),0 10px 24px rgba(0,0,0,.22)}100%{box-shadow:0 0 0 22px rgba(45,91,227,0),0 10px 24px rgba(0,0,0,.22)}}#k-fab.kx-via .l{background:#fff;color:#0E1A2B;font-weight:700}html.k-via .k-online,html.k-via [data-k-online]{display:none!important}html.k-via a[data-via].wa,html.k-via a[data-via][class*="wa"],html.k-via a[data-via].btn-wa,html.k-via a.k-via-btn{background:#2D5BE3!important;border-color:#2D5BE3!important;color:#fff!important;box-shadow:0 10px 24px rgba(45,91,227,.28)!important}';
   var st = document.createElement('style'); st.textContent = css; (document.head || document.documentElement).appendChild(st);
 
 
@@ -220,6 +220,7 @@ window.KAREN_PLATFORMS = {
   var SHIELD = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>';
   var fli;
   function drawFlInfo() {
+    return; // the header already has the Freelancer.com button and every page explains it
     if (document.getElementById('k-home-v2')) return; // the home page explains Freelancer.com itself
     if (!VIA) return;
     var L = FLI[lang()] || FLI.en;
