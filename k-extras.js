@@ -44,7 +44,7 @@ window.KAREN_PLATFORMS = {
   var K = window.KAREN;
   var I = {
     en: {
-      flB: 'Hire me on Freelancer',
+      flB: 'Hire me on Freelancer.com',
       mail: 'Or request it by email', subj: 'Detailed quotation request',
       on: 'Online now', off: 'Back at {t}', fab: 'Chat on WhatsApp',
       wa: 'Hi Karen! I’d like a detailed quotation.',
@@ -218,6 +218,36 @@ window.KAREN_PLATFORMS = {
     if (VIA) { fab.classList.add('kx-via'); fab.setAttribute('aria-label', t.flB); fab.innerHTML = '<span class="b">' + VIA_SVG + '</span><span class="l">' + esc(t.flB) + ' · ' + esc(VIA.proof[lang()] || VIA.proof.en) + '</span>'; return; }
     fab.innerHTML = '<span class="b">' + WA_SVG + '</span><span class="l"><span class="d' + (s.on ? ' on' : '') + '"></span>' + esc(s.on ? t.on : t.off.replace('{t}', s.back)) + '</span>';
   }
+
+
+  /* ---------- "What is Freelancer?" explainer next to the contact button ---------- */
+  var FLI = {
+    en: ['What is Freelancer.com?', 'Freelancer.com is a global platform where clients hire freelancers safely. You pay into a protected milestone, and the money is released to me only when you approve the work. My rating there: 5.0 ★.', 'Safe payment'],
+    ar: ['ما هو فريلانسر؟', 'Freelancer.com منصة عالمية يتعامل فيها العملاء مع المستقلين بأمان. تدفع في دفعة محمية (Milestone)، ولا تصلني الفلوس إلا بعد موافقتك على الشغل. تقييمي هناك 5.0 ★.', 'دفع آمن'],
+    de: ['Was ist Freelancer.com?', 'Freelancer.com ist eine weltweite Plattform, auf der Kunden Freelancer sicher beauftragen. Sie zahlen in einen geschützten Meilenstein, und ich erhalte das Geld erst, wenn Sie die Arbeit freigeben. Meine Bewertung dort: 5.0 ★.', 'Sichere Zahlung'],
+    es: ['¿Qué es Freelancer.com?', 'Freelancer.com es una plataforma mundial donde los clientes contratan freelancers con seguridad. Pagas en un hito protegido y el dinero me llega solo cuando apruebas el trabajo. Mi valoración allí: 5.0 ★.', 'Pago seguro']
+  };
+  var SHIELD = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>';
+  var fli;
+  function drawFlInfo() {
+    if (!VIA) return;
+    var L = FLI[lang()] || FLI.en;
+    if (!fli) {
+      fli = document.createElement('div'); fli.id = 'k-fli'; fli.className = 'kx';
+      document.body.appendChild(fli);
+      fli.addEventListener('click', function (ev) { if (ev.target.closest('.q')) fli.classList.toggle('open'); if (ev.target.closest('.x')) fli.classList.remove('open'); });
+    }
+    fli.setAttribute('dir', dir());
+    fli.innerHTML = '<button type="button" class="q">' + SHIELD + '<span>' + esc(L[2]) + ' · Freelancer.com</span><b>?</b></button><div class="card" role="note"><button type="button" class="x" aria-label="close">×</button><strong>' + SHIELD + esc(L[0]) + '</strong><p>' + esc(L[1]) + '</p></div>';
+  }
+  var css2 = '#k-fli{position:fixed;z-index:86;bottom:calc(88px + env(safe-area-inset-bottom,0px));inset-inline-end:18px;font-family:Manrope,"IBM Plex Sans Arabic",sans-serif}' +
+    '#k-fli .q{display:flex;align-items:center;gap:7px;background:#fff;color:#1E3FA8;border:1.5px solid #C9D6F5;border-radius:999px;padding:6px 8px 6px 12px;font:800 12.5px Manrope,"IBM Plex Sans Arabic",sans-serif;cursor:pointer;box-shadow:0 6px 18px rgba(14,26,43,.15)}' +
+    '#k-fli .q b{width:20px;height:20px;border-radius:50%;background:#2D5BE3;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px}' +
+    '#k-fli .card{display:none;position:absolute;bottom:44px;inset-inline-end:0;width:300px;max-width:calc(100vw - 36px);background:#fff;color:#0E1A2B;border-radius:16px;padding:16px 16px 14px;box-shadow:0 24px 50px rgba(14,26,43,.25);border:1px solid #E2E8EC}' +
+    '#k-fli.open .card{display:block}#k-fli .card strong{display:flex;align-items:center;gap:7px;font-size:15px;color:#1E3FA8;margin-bottom:6px}#k-fli .card p{margin:0;font-size:13.5px;line-height:1.55;color:#3E4650}' +
+    '#k-fli .x{position:absolute;top:6px;inset-inline-end:8px;border:0;background:none;font-size:20px;cursor:pointer;color:#7A8290}' +
+    '@media (max-width:640px){#k-fli{bottom:calc(84px + env(safe-area-inset-bottom,0px))}#k-fli .q span{display:none}}';
+  var st2 = document.createElement('style'); st2.textContent = css2; (document.head || document.documentElement).appendChild(st2);
 
   /* ---------- exit-intent pop-up (desktop only) ---------- */
   function exitPopup() {
@@ -543,13 +573,13 @@ window.KAREN_PLATFORMS = {
     hideStaticPrices();
     if (VIA) { document.documentElement.classList.add('k-via'); sweep(); setInterval(sweep, 600); }
     lastL = lang();
-    drawFab(); drawSeason();
+    drawFab(); drawSeason(); drawFlInfo();
     window.__afterDraw();
     setTimeout(function () { if (fab && !reduce) { fab.classList.add('pulse'); setTimeout(function () { fab.classList.remove('pulse'); }, 4000); } }, 10000);
     if (!VIA) { setTimeout(tips, 2500); setTimeout(webPromo, 18000); }
     setInterval(typing, 90);
     // static pages: watch language changes made by their own switcher
-    setInterval(function () { var L = lang(); if (L !== lastL) { lastL = L; drawFab(); drawSeason(); } }, 800);
+    setInterval(function () { var L = lang(); if (L !== lastL) { lastL = L; drawFab(); drawSeason(); drawFlInfo(); } }, 800);
     // service toast: 30s on a service page or in the service view
     setInterval(function () {
       var title = svcTitle();

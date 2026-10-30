@@ -450,6 +450,12 @@ html{scroll-padding-top:84px !important}
 
 <a href="#top" data-ev-click="3" class="nav-a" style="color: #D5DBE6; text-decoration: none">About</a>
 
+<a href="documentation.html" class="nav-a" style="color: #D5DBE6; text-decoration: none">Documentation</a>
+
+<a href="word-excel.html" class="nav-a" style="color: #D5DBE6; text-decoration: none">Word &amp; Excel</a>
+
+<a href="design.html" class="nav-a" style="color: #D5DBE6; text-decoration: none">Design</a>
+
 <a href="websites.html" class="nav-a" style="color: #D5DBE6; text-decoration: none">Websites</a>
 
 <a href="quality.html" class="nav-a" style="color: #D5DBE6; text-decoration: none">Quality &amp; ISO</a>
@@ -496,7 +502,7 @@ html{scroll-padding-top:84px !important}
 <div class="k-me-t"><strong class="disp">Karen</strong><span>Quality Consultant · Presentation &amp; Document Designer</span></div>
 </div>
 <dl class="k-facts">
-<div><dt>Experience</dt><dd>About 10 years</dd></div><div><dt>Reply time</dt><dd>1–3 working hours</dd></div><div><dt>My local time</dt><dd>5:50 pm GMT+3</dd></div>
+<div><dt>Experience</dt><dd>About 10 years</dd></div><div><dt>Reply time</dt><dd>1–3 working hours</dd></div><div><dt>My local time</dt><dd>9:12 am GMT+2</dd></div>
 </dl>
 <details class="disc-t k-disc">
 <summary><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B7791F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12l-8 8-9-9V3h8z"></path><path d="M7.5 7.5h.01"></path></svg>Get a discount: up to 20% off</summary>
@@ -3197,7 +3203,7 @@ class Component extends DCLogic {
       estimate: estTxt, estOld: money(base), estDays: express ? T.bd1 : dayTxt(days) + (dept === 'quality' || s.plan === 'mil' ? ' ' + T.perMil : ''), readyBy,
       offers: [{ i: '', t: fill(T.offerFirst) }, { i: '', t: fill(T.offerRet) }],
       topbar: fill(T.zrTick + '     |     ' + T.speedTick + '     |     ' + T.fsTick + '     |     ' + T.tbarFixed + '     |     ' + T.tbar2).split('  ·  ').join('     |     '),
-      navItems: [['home', T.vHome], ['prices', T.vPrices], ['how', T.vHow], ['about', T.vAbout]].map((x) => ({ href: '#top', label: x[1], go: () => { this.setState({ view: x[0], menuOpen: false, mega: false, plOpen: x[0] === 'prices' ? true : s.plOpen }); try { window.scrollTo(0, 0); } catch (e) {} } })).concat([{ href: 'websites.html', label: ({ en: 'Websites', ar: 'المواقع', de: 'Websites', es: 'Webs' })[L], go: null }, { href: 'quality.html', label: T.qLink, go: null }]),
+      navItems: [['home', T.vHome], ['prices', T.vPrices], ['how', T.vHow], ['about', T.vAbout]].map((x) => ({ href: '#top', label: x[1], go: () => { this.setState({ view: x[0], menuOpen: false, mega: false, plOpen: x[0] === 'prices' ? true : s.plOpen }); try { window.scrollTo(0, 0); } catch (e) {} } })).concat([{ href: 'documentation.html', label: ({ en: 'Documentation', ar: 'التوثيق', de: 'Dokumentation', es: 'Documentación' })[L], go: null }, { href: 'word-excel.html', label: 'Word & Excel', go: null }, { href: 'design.html', label: ({ en: 'Design', ar: 'التصميم', de: 'Design', es: 'Diseño' })[L], go: null }, { href: 'websites.html', label: ({ en: 'Websites', ar: 'المواقع', de: 'Websites', es: 'Webs' })[L], go: null }, { href: 'quality.html', label: T.qLink, go: null }]),
       menuShown: !!s.menu, menuOpen: s.menu ? 'true' : 'false', menuIcon: s.menu ? '✕' : '☰',
       toggleMenu: () => this.setState({ menu: !s.menu }), closeMenu: () => this.setState({ menu: false }),
       msSteps: T.msSteps.map((x, i) => ({ t: x[0], d: x[1], p: [30, 40, 30][i] + '%', w: [30, 70, 100][i] + '%' })),
