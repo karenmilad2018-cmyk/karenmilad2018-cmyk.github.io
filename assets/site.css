@@ -336,3 +336,6 @@ footer{background:var(--dk);color:#9AA0A9;padding:56px 0 30px;font-size:14.5px;b
 .tvp .pl{display:none}.tv.pz .tvp .pl{display:inline}.tv.pz .tvp .pa{display:none}
 @media (max-width:600px){.tv{aspect-ratio:4/5}}
 @media (prefers-reduced-motion:reduce){.tvs,.tvs.on h3,.tvs.on p{transition:none;animation:none}}
+
+.rms3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}.rms3 img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;display:block}
+@media (max-width:700px){.rms3{grid-template-columns:1fr}}
