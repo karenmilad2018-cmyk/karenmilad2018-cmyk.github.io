@@ -318,3 +318,21 @@ footer{background:var(--dk);color:#9AA0A9;padding:56px 0 30px;font-size:14.5px;b
 [dir=rtl] .ts .x{right:auto;left:8px}
 @media (max-width:700px){.ts{left:12px;right:12px;bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:none}[dir=rtl] .ts{right:12px}}
 @media (prefers-reduced-motion:reduce){.ts{transition:opacity .3s}.ts .dot{animation:none}}
+
+/* tips player */
+.tv{position:relative;max-width:980px;margin:34px auto 0;aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:radial-gradient(ellipse 80% 70% at 20% 10%,#24304f,#10141f 60%,#0b0d14);box-shadow:0 30px 70px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.06);text-align:start}
+.tvb{position:absolute;left:24px;right:24px;top:20px;display:flex;gap:6px;z-index:2}.tvb i{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.18);overflow:hidden}.tvb b{display:block;height:100%;width:0;background:var(--gd)}
+[dir=rtl] .tvb b{margin-inline-start:0}
+.tvc{position:absolute;inset:0;cursor:pointer}
+.tvs{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(26px,7%,80px);opacity:0;transform:translateY(18px);transition:opacity .6s,transform .8s var(--ease)}
+.tvs.on{opacity:1;transform:none}
+.tvn{font-weight:800;font-size:clamp(46px,9vw,110px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(227,176,75,.75)}
+.tvs h3{margin:clamp(10px,2vw,22px) 0 0;font-size:clamp(22px,3.6vw,44px);line-height:1.15;color:#fff;letter-spacing:-.01em;max-width:18em}
+.tvs p{margin:clamp(8px,1.4vw,16px) 0 0;font-size:clamp(14px,1.8vw,21px);color:#B9C0CE;max-width:30em}
+.tvs.on h3{animation:tvu .8s .15s var(--ease) both}.tvs.on p{animation:tvu .8s .35s var(--ease) both}
+@keyframes tvu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tvp{position:absolute;right:18px;bottom:16px;z-index:2;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:13px;cursor:pointer}
+[dir=rtl] .tvp{right:auto;left:18px}
+.tvp .pl{display:none}.tv.pz .tvp .pl{display:inline}.tv.pz .tvp .pa{display:none}
+@media (max-width:600px){.tv{aspect-ratio:4/5}}
+@media (prefers-reduced-motion:reduce){.tvs,.tvs.on h3,.tvs.on p{transition:none;animation:none}}
