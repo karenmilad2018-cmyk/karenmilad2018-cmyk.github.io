@@ -3,6 +3,15 @@ var D=window.D||{T:{en:{}}},L='en',$=function(s,r){return (r||document).querySel
 var TZ=(function(){try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'Africa/Cairo',timeZoneName:'shortOffset'}).formatToParts(new Date());var z=p.filter(function(x){return x.type==='timeZoneName'})[0];return z?z.value:'GMT+2'}catch(e){return 'GMT+2'}})();
 function T(k){var t=D.T[L]||{};var v=t[k]!=null?t[k]:(D.T.en||{})[k];return v==null?'':String(v).replace(/\{tz\}/g,TZ)}
 window.KT=T;
+/* ---------- prices hidden for visitors in Egypt (by device time zone); Karen sees them after opening the site once with ?me=1 ---------- */
+var NP=false;try{NP=Intl.DateTimeFormat().resolvedOptions().timeZone==='Africa/Cairo'}catch(e){}
+try{var q=location.search;if(/[?&]me=1\b/.test(q))localStorage.setItem('km_me','1');if(/[?&]me=0\b/.test(q))localStorage.removeItem('km_me');if(localStorage.getItem('km_me')==='1')NP=false}catch(e){}
+(function(){var A={en:'Ask for a price',ar:'اطلب السعر',de:'Preis anfragen',es:'Pide el precio'};D.T=D.T||{};for(var l in A){D.T[l]=D.T[l]||{};D.T[l].askP=A[l]}})();
+function noPrice(){if(!NP)return;document.documentElement.classList.add('np');
+ $$('b,span,small,em').forEach(function(el){if(el.children.length)return;var t=(el.textContent||'').trim();if(/^\$\s?[\d,.]+/.test(t)){el.setAttribute('data-t','askP');el.textContent=T('askP')}});
+ $$('a[href*="mail.google.com"]').forEach(function(a){a.href=a.href.replace(/%20%C2%B7%20%24\d+/g,'').replace(/Fixed%20price%3A%20%24\d+/g,'Please%20send%20me%20the%20price.')});}
+window.KNoPrice=noPrice;
+
 function pick(){var l=null;try{l=localStorage.getItem('k3-lang')}catch(e){}var q=/[?&]lang=(en|ar|de|es)/.exec(location.search);if(q)l=q[1];
  if(!l){var n=(navigator.languages||[navigator.language||'en']).map(function(x){return (x||'').slice(0,2)});for(var i=0;i<n.length;i++){if(['en','ar','de','es'].indexOf(n[i])>=0){l=n[i];break}}}return l||'en'}
 function apply(l){L=l;var h=document.documentElement;h.lang=l;h.dir=l==='ar'?'rtl':'ltr';
@@ -15,6 +24,7 @@ document.addEventListener('DOMContentLoaded',function(){
  apply(pick());
  var lg=$('#lg');if(lg)lg.addEventListener('change',function(){try{localStorage.setItem('k3-lang',lg.value)}catch(e){}apply(lg.value)});
  var mn=$('.mn');if(mn)mn.addEventListener('click',function(){var n=$('.nav');n.classList.toggle('open');mn.setAttribute('aria-expanded',n.classList.contains('open'))});
+ noPrice();
  // online status (my hours 9-23 in my time zone)
  var h=+new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Cairo',hour:'numeric',hour12:false}).format(new Date())%24;
  if(!(h>=9&&h<23))$$('.st').forEach(function(s){s.classList.add('off');var b=$('b',s),p=$('span',s);b.setAttribute('data-t','off');p.setAttribute('data-t','back');b.textContent=T('off');p.textContent=T('back')});
@@ -36,10 +46,10 @@ document.addEventListener('DOMContentLoaded',function(){
 // ---------- delivery date (starts at 9:00 my time if sent outside my hours), shown in visitor's own time ----------
 function deliveryDate(hours){var now=new Date(),h=+new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Cairo',hour:'numeric',hour12:false}).format(now)%24,start=now;
  if(!(h>=9&&h<23)){var add=h>=23?(24-h+9):(9-h);start=new Date(now.getTime()+add*3600e3);start.setMinutes(0,0,0)}
- var t=new Date(start.getTime()+hours*3600e3);var loc={en:'en-GB',ar:'ar-EG',de:'de-DE',es:'es-ES'}[L]||'en-GB';
+ var t=new Date(start.getTime()+hours*3600e3);var loc={en:'en-GB',ar:'ar-u-nu-latn',de:'de-DE',es:'es-ES'}[L]||'en-GB';
  try{return new Intl.DateTimeFormat(loc,{weekday:'long',day:'numeric',month:'long',hour:'numeric',minute:'2-digit'}).format(t)}catch(e){return t.toString()}}
 window.KDel=deliveryDate;
-function mailHref(svcKey,j){var x=D.SV[svcKey];var body='Service: '+D.T.en['psn_'+svcKey]+'\nPackage: '+D.T.en['tier'+j]+' ('+D.T.en['psz_'+svcKey+j]+')\nFixed price: $'+x.p[j]+'\n\nMy file is attached.';
+function mailHref(svcKey,j){var x=D.SV[svcKey];var body='Service: '+D.T.en['psn_'+svcKey]+'\nPackage: '+D.T.en['tier'+j]+' ('+D.T.en['psz_'+svcKey+j]+')\n'+(NP?'Please send me the price.':'Fixed price: $'+x.p[j])+'\n\nMy file is attached.';
  return D.GM+'&su='+encodeURIComponent('Order: '+D.T.en['psn_'+svcKey]+' · $'+x.p[j])+'&body='+encodeURIComponent(body)}
 window.KMail=mailHref;
 // ---------- chooser ----------
@@ -49,7 +59,7 @@ function chooser(){var root=$('#chooser');if(!root)return;var k=root.getAttribut
   var R=$('#res');$('.rn',R).setAttribute('data-t','psn_'+k);$('.rn',R).textContent=T('psn_'+k);
   $('.sz',R).textContent=T('tier'+j)+' · '+T('psz_'+k+j);$('s',R).textContent='$'+x.m[j];$('.pb',R).textContent='$'+x.p[j];$('.sv',R).textContent=T('save')+' '+Math.round((1-x.p[j]/x.m[j])*100)+'%';
   $('.dd',R).textContent=deliveryDate(x.d[j]==='d2'?48:24);$('.dl2',R).textContent=T('psl_'+k+j);
-  $('#rMail').href=mailHref(k,j);$('#rSee').href=D.PRE+'s/'+k+'.html'}
+  $('#rMail').href=mailHref(k,j);noPrice();$('#rSee').href=D.PRE+'s/'+k+'.html'}
  $$('.op',root).forEach(function(b){b.addEventListener('click',function(){k=b.getAttribute('data-k');draw()})});
  $$('.tier',root).forEach(function(b,i){b.addEventListener('click',function(){j=i;draw()})});
  document.addEventListener('k3lang',draw);draw()}
