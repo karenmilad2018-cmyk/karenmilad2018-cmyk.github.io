@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://karenmilad.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://karenmilad.com/powerpoint.html</loc><priority>0.8</priority></url>
-  <url><loc>https://karenmilad.com/word.html</loc><priority>0.8</priority></url>
-  <url><loc>https://karenmilad.com/excel.html</loc><priority>0.8</priority></url>
-  <url><loc>https://karenmilad.com/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://karenmilad.com/</loc></url>
+  <url><loc>https://karenmilad.com/powerpoint.html</loc></url>
+  <url><loc>https://karenmilad.com/word.html</loc></url>
+  <url><loc>https://karenmilad.com/excel.html</loc></url>
+  <url><loc>https://karenmilad.com/about.html</loc></url>
+  <url><loc>https://karenmilad.com/s/master.html</loc></url>
+  <url><loc>https://karenmilad.com/s/pitch.html</loc></url>
+  <url><loc>https://karenmilad.com/s/course.html</loc></url>
+  <url><loc>https://karenmilad.com/s/present.html</loc></url>
+  <url><loc>https://karenmilad.com/s/profile.html</loc></url>
+  <url><loc>https://karenmilad.com/s/pdf2ppt.html</loc></url>
+  <url><loc>https://karenmilad.com/s/format.html</loc></url>
+  <url><loc>https://karenmilad.com/s/chart.html</loc></url>
+  <url><loc>https://karenmilad.com/s/thesis.html</loc></url>
+  <url><loc>https://karenmilad.com/s/book.html</loc></url>
+  <url><loc>https://karenmilad.com/s/docs.html</loc></url>
+  <url><loc>https://karenmilad.com/s/clean.html</loc></url>
+  <url><loc>https://karenmilad.com/s/auto.html</loc></url>
 </urlset>
