@@ -297,3 +297,8 @@ footer{background:var(--dk);color:#9AA0A9;padding:56px 0 30px;font-size:14.5px;b
 .dlap .mug{right:6%;bottom:12%;width:7%;aspect-ratio:1/1.1;background:linear-gradient(90deg,#f7f5f1,#d8d3cb);border-radius:4px 4px 14px 14px;box-shadow:12px 14px 22px rgba(60,40,20,.25)}
 .dlap .note{left:5%;bottom:9%;width:14%;aspect-ratio:3/4;background:#fff;transform:rotate(-8deg);box-shadow:8px 12px 20px rgba(60,40,20,.2);border-top:10px solid #1E6170}
 @media (max-width:600px){.scn{aspect-ratio:4/3}.scn[data-v=conf] .hold{left:8%;width:84%;top:10%}.scn[data-v=room] .hold{left:19%;width:62%;top:6%}.droom .ch{top:64%}.scn[data-v=lap] .hold{left:10%;width:80%;top:10%}}
+
+.kph{width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover;border-radius:22px;margin:auto;display:block}
+.kph.sm{width:180px;max-width:180px;margin:0;border-radius:18px}
+.desk{width:100%;border-radius:22px;margin-top:clamp(36px,5vw,60px);display:block}
+.rms{columns:3 280px;column-gap:16px;margin-top:40px}.rms img{width:100%;display:block;border-radius:16px;margin-bottom:16px;break-inside:avoid}
