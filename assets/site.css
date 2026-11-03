@@ -257,3 +257,43 @@ footer{background:var(--dk);color:#9AA0A9;padding:56px 0 30px;font-size:14.5px;b
 @media (max-width:800px){.meet{grid-template-columns:1fr}.kp{max-width:360px}}
 .stg img.ppl{position:absolute;left:0;top:0;width:100%;z-index:3;pointer-events:none}
 .stg .scr{z-index:2}
+
+/* designed stage scenes (no photos) */
+.scn{position:relative;aspect-ratio:16/10;border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.45);transition:background .6s}
+.scn .dec{position:absolute;inset:0;opacity:0;transition:opacity .6s;pointer-events:none}
+.scn[data-v=conf] .dconf,.scn[data-v=room] .droom,.scn[data-v=lap] .dlap{opacity:1}
+.scn .dec i{position:absolute;display:block}
+.hold{position:absolute;transition:left .7s var(--ease),top .7s var(--ease),width .7s var(--ease)}
+.scrn{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#fff;transition:all .7s var(--ease)}
+.scrn .glare{position:absolute;inset:0;pointer-events:none}
+.hold .base{position:absolute;left:-9%;right:-9%;height:0;opacity:0;transition:opacity .5s}
+/* conference */
+.scn[data-v=conf]{background:radial-gradient(ellipse 75% 55% at 50% 28%,#1b2645 0,#0a0d18 62%,#05060b 100%)}
+.scn[data-v=conf] .hold{left:18%;top:8%;width:64%}
+.scn[data-v=conf] .scrn{box-shadow:0 0 0 6px #0c0f17,0 0 90px 18px rgba(130,160,255,.28)}
+.scn[data-v=conf] .glare{background:linear-gradient(180deg,rgba(255,255,255,.06),transparent 30%)}
+.dconf .beam{top:-10%;width:30%;height:90%;background:linear-gradient(180deg,rgba(255,236,190,.20),rgba(255,236,190,0) 75%);filter:blur(10px)}
+.dconf .b1{left:4%;transform:rotate(-24deg);transform-origin:top}.dconf .b2{right:4%;transform:rotate(24deg);transform-origin:top}
+.dconf .floor{left:0;right:0;top:56%;bottom:0;background:linear-gradient(180deg,#1f2842,#151b2e 70%)}
+.dconf .floor::before{content:"";position:absolute;left:18%;right:18%;top:0;height:22%;background:radial-gradient(ellipse at 50% 0,rgba(130,160,255,.22),transparent 70%)}
+.dconf .lect{right:9%;top:46%;width:7%;height:16%;background:linear-gradient(180deg,#2a3352,#121729);clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);border-top:3px solid #e3b04b}
+.dconf .crowd{position:absolute;left:-2%;bottom:-3%;height:40%;width:104%;filter:drop-shadow(0 -1px 0 rgba(150,175,255,.35))}
+/* meeting room */
+.scn[data-v=room]{background:linear-gradient(180deg,#ECE7DF 0,#E2DBD0 62%,#CFC5B6 62.2%,#C3B8A7 100%)}
+.scn[data-v=room] .hold{left:28%;top:12%;width:44%}
+.scn[data-v=room] .scrn{box-shadow:0 0 0 9px #141518,0 0 0 10px #2b2d31,0 26px 40px -6px rgba(40,30,20,.45)}
+.scn[data-v=room] .glare{background:linear-gradient(120deg,rgba(255,255,255,.14),transparent 40%)}
+.droom .win{left:0;top:0;width:16%;height:62%;background:linear-gradient(90deg,rgba(255,255,255,.75),rgba(255,255,255,.15));box-shadow:inset -6px 0 0 #d6cec2}
+.droom .tbl{left:14%;right:14%;top:72%;bottom:-2%;background:linear-gradient(180deg,#8a6646,#6b4c33);clip-path:polygon(16% 0,84% 0,100% 100%,0 100%);box-shadow:inset 0 3px 0 rgba(255,255,255,.15)}
+.droom .ch{width:9%;height:16%;top:62%;background:#2c2f36;border-radius:12px 12px 4px 4px}
+.droom .c1{left:22%}.droom .c2{left:34%}.droom .c3{right:34%}.droom .c4{right:22%}
+/* laptop */
+.scn[data-v=lap]{background:radial-gradient(ellipse 80% 70% at 50% 35%,#F4F1EC,#DCD5CB 75%)}
+.scn[data-v=lap] .hold{left:20%;top:7%;width:60%}
+.scn[data-v=lap] .scrn{box-shadow:0 0 0 14px #16181c,0 0 0 15px #3a3d43;border-radius:2px}
+.scn[data-v=lap] .glare{background:linear-gradient(125deg,rgba(255,255,255,.18),transparent 38%)}
+.scn[data-v=lap] .base{opacity:1;top:calc(100% + 14px);height:26px;background:linear-gradient(180deg,#d9dce1,#a9aeb6);clip-path:polygon(2% 0,98% 0,100% 70%,98% 100%,2% 100%,0 70%);filter:drop-shadow(0 18px 18px rgba(60,40,20,.35))}
+.scn[data-v=lap] .base::after{content:"";position:absolute;left:42%;right:42%;top:0;height:7px;background:#9aa0a8;border-radius:0 0 8px 8px}
+.dlap .mug{right:6%;bottom:12%;width:7%;aspect-ratio:1/1.1;background:linear-gradient(90deg,#f7f5f1,#d8d3cb);border-radius:4px 4px 14px 14px;box-shadow:12px 14px 22px rgba(60,40,20,.25)}
+.dlap .note{left:5%;bottom:9%;width:14%;aspect-ratio:3/4;background:#fff;transform:rotate(-8deg);box-shadow:8px 12px 20px rgba(60,40,20,.2);border-top:10px solid #1E6170}
+@media (max-width:600px){.scn{aspect-ratio:4/3}.scn[data-v=conf] .hold{left:8%;width:84%;top:10%}.scn[data-v=room] .hold{left:19%;width:62%;top:6%}.droom .ch{top:64%}.scn[data-v=lap] .hold{left:10%;width:80%;top:10%}}
