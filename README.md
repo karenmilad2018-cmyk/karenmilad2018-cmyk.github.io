@@ -1,36 +1,7 @@
-# موقع Karen — طريقة الرفع على GitHub Pages
+# karenmilad.com
 
-## ١) إنشاء الحساب والمستودع
-1. ادخلي github.com واعملي حساب (أو سجلي دخول).
-2. اضغطي **New repository**.
-3. اسم المستودع: `اسم-المستخدم.github.io` (مثلاً `karenmilad.github.io`) عشان يبقى الرابط قصير.
-4. اختاري **Public** واضغطي **Create repository**.
+PowerPoint, Word and Excel services by Karen.
 
-## ٢) رفع الملفات
-1. فكّي ضغط ملف الموقع على جهازك.
-2. في صفحة المستودع اضغطي **uploading an existing file**.
-3. اسحبي **كل محتويات الفولدر** (index.html و quality.html و **k-extras.js** و فولدر services و sitemap.xml و robots.txt و llms.txt و CNAME) مش الفولدر نفسه.
-5. لو فولدر **samples** لسه موجود على GitHub امسحيه (مبقاش مستخدم).
-4. اضغطي **Commit changes**.
-
-## ٣) تشغيل الموقع
-1. Settings ← Pages.
-2. Source: **Deploy from a branch** ← Branch: **main** و **/(root)** ← Save.
-3. بعد دقيقة أو اثنين الموقع يشتغل على: `https://اسم-المستخدم.github.io`
-
-## ٤) قبل ما تعلني عن الموقع
-- افتحي sitemap.xml و robots.txt و llms.txt وبدلي `https://karenmilad.com` برابط موقعك الحقيقي (أو ابعتيلي الرابط وأنا أجهزهم لك).
-- سجلي الموقع في **Google Search Console** وابعتي `sitemap.xml`.
-- سجليه في **Bing Webmaster Tools** (وده اللي بيعتمد عليه ChatGPT في البحث).
-- حطي رابط الموقع في بروفايلك على Freelancer و LinkedIn.
-
-## ٥) إضافة صور ودومين لاحقاً
-- الصور: ابعتيها لي وأنا أحطها في أماكنها وأطلعلك نسخة جديدة ترفعيها بنفس الطريقة (Upload ← Commit).
-- الدومين الخاص: Settings ← Pages ← Custom domain.
-
-## ٦) إعدادات سريعة تقدري تغيريها بنفسك
-افتحي ملف **k-extras.js** وفي أول سطور هتلاقي:
-- `wa`: رقم الواتساب.
-- `email`: الإيميل اللي بتوصله طلبات العينة المجانية.
-- `from` و `to`: ساعات تواجدك بتوقيت القاهرة (9 و 23 يعني من ٩ الصبح لـ ١١ بالليل). ده اللي بيطلّع "متاحة الآن" أو "أعود الساعة…" جنب زرار الواتساب.
-- العروض الموسمية (الشريط اللي فوق) بتتغير لوحدها حسب الشهر، والنصوص بتاعتها جوه نفس الملف تحت كلمة `s:`.
+- Pages: `index.html`, `powerpoint.html`, `word.html`, `excel.html`, `about.html`, and one page per service in `s/`
+- Shared files: `assets/site.css`, `assets/site.js`
+- Images: `media/nw`, `media/s`, `media/brand`
