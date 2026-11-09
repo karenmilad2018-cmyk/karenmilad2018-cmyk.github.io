@@ -200,3 +200,10 @@ function go(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(go,0)});else go();
 })();
+
+(function(){var A='karenmilad2018@gmail.com';
+function T(k){return window.KT?window.KT(k):k}
+function go(){var m=matchMedia('(pointer:coarse)').matches,sv=document.querySelector('.sbar b'),su=sv?T('gmR')+sv.textContent.trim():T('gmS'),e=encodeURIComponent,b=T('gmB'),
+h=m?'mailto:'+A+'?subject='+e(su)+'&body='+e(b):'https://mail.google.com/mail/?view=cm&fs=1&to='+A+'&su='+e(su)+'&body='+e(b);
+[].forEach.call(document.querySelectorAll('a.gm'),function(a){a.href=h;a.setAttribute('aria-label',T('gmA')+' ('+A+')');if(m){a.removeAttribute('target')}})}
+document.addEventListener('k3lang',go);if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(go,0)});else go()})();
