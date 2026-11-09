@@ -223,7 +223,7 @@ footer{background:var(--dk);color:#9AA0A9;padding:56px 0 30px;font-size:14.5px;b
 #lbx{position:fixed;inset:0;z-index:200;background:rgba(14,15,18,.9);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}#lbx.on{display:flex}#lbx img{max-width:100%;max-height:100%;border-radius:8px}
 /* about */
 .abh{display:flex;gap:30px;align-items:center;flex-wrap:wrap}.abh img{width:150px;height:150px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px rgba(227,176,75,.6)}
-.jr{display:grid;gap:12px;margin-top:30px;max-width:860px}.jr>div{display:flex;gap:16px;background:var(--wh);border-radius:18px;padding:20px 22px;box-shadow:0 1px 0 var(--ln)}.jr i{flex-shrink:0;width:40px;height:40px;border-radius:12px;background:var(--ink);color:var(--gd);font-style:normal;font-weight:800;display:flex;align-items:center;justify-content:center}.jr b{display:block}.jr p{margin:4px 0 0;color:var(--mut)}
+.jr{display:grid;gap:12px;margin-top:30px;max-width:860px}.jr div{display:flex;gap:16px;background:var(--wh);border-radius:18px;padding:20px 22px;box-shadow:0 1px 0 var(--ln)}.jr i{flex-shrink:0;width:40px;height:40px;border-radius:12px;background:var(--ink);color:var(--gd);font-style:normal;font-weight:800;display:flex;align-items:center;justify-content:center}.jr b{display:block}.jr p{margin:4px 0 0;color:var(--mut)}
 .lsn{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}.lsn div{background:var(--dk2);border:1px solid var(--lnd);border-radius:20px;padding:22px}.lsn b{display:block;color:#fff;margin-bottom:6px}.lsn p{margin:0;color:var(--mut2)}
 @media (max-width:900px){.lsn{grid-template-columns:1fr 1fr}}@media (max-width:560px){.lsn{grid-template-columns:1fr}}
 .mot{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.mot span{background:var(--ink);color:#fff;font-weight:700;border-radius:999px;padding:9px 16px}
@@ -339,11 +339,3 @@ footer{background:var(--dk);color:#9AA0A9;padding:56px 0 30px;font-size:14.5px;b
 
 .rms3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}.rms3 img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;display:block}
 @media (max-width:700px){.rms3{grid-template-columns:1fr}}
-
-/* QC fixes 2026-11 */
-.jr>div>div{display:block;flex:1;min-width:0;background:none;padding:0;box-shadow:none;border-radius:0}
-.wkr,.wkr:nth-of-type(even){grid-template-columns:1fr;max-width:920px;margin-left:auto;margin-right:auto}
-.wkr:nth-of-type(even) .wb{order:0}
-s[dir="ltr"],.pm,.sv{display:none!important}
-.np [data-t="from"]{display:none!important}
-.np b[data-t="askP"]{font-size:min(1em,28px)!important;line-height:1.2}
